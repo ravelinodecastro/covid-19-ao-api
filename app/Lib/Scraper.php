@@ -4,6 +4,7 @@
     use App\Models\General;
     use Carbon\Carbon;
     use Goutte\Client as GoutteClient;
+    use Symfony\Component\HttpClient\HttpClient;
 
     class Scraper
     {
@@ -15,15 +16,17 @@
     
         public $status = 1;
     
-        public function __construct(GoutteClient $client)
-        {
-            $this->client = $client;
-        }
+        //public function __construct(GoutteClient $client)
+        //{
+         //   $this->client = $client;
+        //}
     
         public function handle($url)
         {
             try {
-                $crawler = $this->client->request('GET', $url);
+                $client = new GoutteClient(HttpClient::create(['timeout' => 300]));
+                $crawler = $client->request('GET', $url);
+                //$crawler = $this->client->request('GET', $url);
     
                 $data = [];
                 $crawler->filter('section.lastsection')->each(function ($node) use (&$data, $url) {
