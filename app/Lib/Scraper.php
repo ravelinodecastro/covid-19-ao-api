@@ -24,7 +24,7 @@
         public function handle($url)
         {
             try {
-                $client = new GoutteClient(HttpClient::create(['timeout' => 300]));
+                $client = new GoutteClient(HttpClient::create(['timeout' => 6000]));
                 $crawler = $client->request('GET', $url);
                 //$crawler = $this->client->request('GET', $url);
     
