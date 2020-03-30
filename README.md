@@ -4,7 +4,7 @@
 
 Covid-19 Ao Api is an Angolan API created to show in real time the information about the cases of the corona virus detected in the Angolan territory.
 
-
+[Click here to see results in your browser](https://covid-19-ao.herokuapp.com/general)
 
 ## Usage (Javascript)
 
