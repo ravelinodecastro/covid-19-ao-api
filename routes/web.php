@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('locale/{locale}', function ($locale){
+    Session::put('locale', $locale);
+    return redirect()->back();
 });
+
+Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/tips', 'TipsController@index')->name('tips');

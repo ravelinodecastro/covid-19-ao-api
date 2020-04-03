@@ -18,4 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/general', 'GeneralController@general');
+Route::get('/general', 'Api\GeneralController@general');
+Route::get('/report', 'Api\GeneralController@report');
+Route::get('/tips', 'Api\TipsController@get');

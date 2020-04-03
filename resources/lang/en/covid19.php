@@ -1,0 +1,72 @@
+<?php
+
+return [
+    'seo_description' => 'Covid19AoApi is an Angolan API created to show in real time information on cases of the corona virus detected in the Angolan territory.',
+    'seo_keywords' => 'Angola, Corona virus, Covid-19, Api, Programmers, Development',
+    'langs' => 'Languages',
+    'homepage' => 'Home page',
+    'login' => 'Login',
+    'register' => 'Register',
+    'confirmed' => 'Confirmed cases',
+    'suspects' => 'Suspicious cases',
+    'recovered' => 'recovered',
+    'deaths' => 'Deaths',
+    'lastupdate' => 'Last updated',
+    'footer_about' => 'Covid-19AoApi was created with the aim of informing the Angolan people, in order to help fight the pandemic. Please say no to fake news, stay home, take care of yourself and your family. ',
+    
+    'usefullinks' => 'Useful links',
+    'callsos' => 'Call emergency',
+    'who' => 'World Health Organization',
+    'menu' => 'Menu',
+    'api' => 'API (Documentation)',
+    'test' => 'Test',
+    'about' => 'About',
+    'about_description' => 'This project was developed by <a href="https://github.com/ravelinodecastro/"> Ravelino de Castro </a>, a fullstack programmer, student of computer science',
+    'contribution' => 'contribution',
+    'contribution_description' => 'If you are a developer, you can contribute to the project, as it is open source. If you are not and still want to contribute to the project, you can help with the payment of a domain (ex: covid-19-ao.com) ',
+    
+    'test_header' => 'Covid-19 online test',
+    'test_p' => 'This is a questionnaire that allows you to easily have a diagnosis of Covid-19 disease, caused by the new Corona virus.',
+    'test_p2' => 'The questions are based on research done by experts from different countries and the result is based on the answers.',
+    'btn_start' => 'Start the test',
+    
+    'btn_confirmation' => 'Confirm the answer',
+    'result_good' => 'You look fine and have no symptoms of COVID-19. Click on the "Prevention Tips" button, continue to take care of yourself and your family',
+    'result_med' => 'Keep safe, comply with the quarantine and in case of continually presenting the indicated symptoms, look for a hospital unit.',
+    'result_bad' => 'Your case is worrying, go to the nearest hospital unit',
+    'call111' => 'Call 111',
+    'tips' => 'Prevention tips',
+    'new_test' => 'New test',
+    'q_fever' => 'did you have a fever?',
+    
+    'yes' => "Yes",
+    'no' => "No",
+    
+    'q_time_fever' => "Have you had a fever for a long time?",
+    'two_less' => "Two days or less", 
+    'two_more' => "More than two days",
+    'q_temperature' => "What is the highest temperature you measured?",
+    'less_39' => "Less than 102.2º F",
+     'to_39' => "From 102.2º F",
+    'q_old_preg' => "Are you pregnant or are you over 65?",
+    'q_place_50' => "Have you recently visited places with more than 50 people?",
+    'q_international_trip' => "Did you travel internationally recently?",
+    'q_approch _' => "Did you have an approximation with someone who is infected?",
+    'q_symptoms' => "Did you have any of these symptoms?",
+    
+    's_coryza' => "Coryza",
+    's_stuffy_nose' => "Stuffy nose",
+    's_tiredness' => "Tiredness",
+    's_cough' => "Cough",
+    's_shortness_of_breath' => "Shortness of breath or difficulty breathing",
+    's_headache' => "Headache",
+    's_body_aches' => "Body pain or malaise",
+    's_sore_throat' => "Sore throat",
+    's_diarrhea' => "Diarrhea or abdominal pain",
+    's_loss_of_smell' => "Loss of smell (no smell)",
+    's_loss_of_taste' => "Loss of taste (no taste)",
+
+    'q_took_medicines' => "Did you take any medication for your symptoms?",
+
+    'tips_header' => "Follow these tips, share with your friends and family, save your route and those you love."
+];
