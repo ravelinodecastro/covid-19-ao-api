@@ -61,7 +61,7 @@
                             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="{{ url('locale/pt') }}">Português</a>
                                 <a class="dropdown-item"  href="{{ url('locale/en') }}">English</a>
-                                <a class="dropdown-item"  href="{{ url('locale/fr') }}">Francais</a>
+                                <a class="dropdown-item"  href="{{ url('locale/fr') }}">Français</a>
                                 <a class="dropdown-item"  href="{{ url('locale/es') }}">Español</a>
                             </div>
                         </li>
