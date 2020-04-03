@@ -20468,7 +20468,7 @@ var render = function() {
                             _c(
                               "label",
                               {
-                                staticClass: "btn btn-outline-unique",
+                                staticClass: "btn btn-outline-unique mb-2",
                                 on: {
                                   click: function($event) {
                                     $event.preventDefault()
@@ -20498,7 +20498,7 @@ var render = function() {
                             _c(
                               "label",
                               {
-                                staticClass: "btn btn-outline-unique",
+                                staticClass: "btn btn-outline-unique mb-2",
                                 on: {
                                   click: function($event) {
                                     $event.preventDefault()
@@ -20700,19 +20700,19 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "m-4" }, [
               _vm.perc >= 25
-                ? _c("button", { staticClass: "btn btn-unique" }, [
+                ? _c("button", { staticClass: "btn btn-unique mb-2" }, [
                     _vm._v(_vm._s(_vm.$t("covid19.call111")))
                   ])
                 : _vm._e(),
               _vm._v(" "),
-              _c("button", { staticClass: "btn btn-unique" }, [
+              _c("button", { staticClass: "btn btn-unique mb-2" }, [
                 _vm._v(_vm._s(_vm.$t("covid19.tips")))
               ]),
               _vm._v(" "),
               _c(
                 "button",
                 {
-                  staticClass: "btn btn-unique",
+                  staticClass: "btn btn-unique mb-2",
                   on: {
                     click: function($event) {
                       $event.preventDefault()
@@ -36114,8 +36114,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\covid\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\covid\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\covid19aoapi\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\covid19aoapi\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

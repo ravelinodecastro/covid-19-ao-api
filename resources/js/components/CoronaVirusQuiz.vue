@@ -14,11 +14,11 @@
 
             <div class="m-4" v-if="currentQuestion.type === 'tf'">
               <div class="btn-group-toggle" data-toggle="buttons" v-radio="answer">
-                <label class="btn btn-outline-unique" @click.prevent="handleAnswer">
+                <label class="btn btn-outline-unique mb-2" @click.prevent="handleAnswer">
                   <input type="radio" name="options" id="option1" value="t" />
                   {{currentQuestion.strinOptions[0]}}
                 </label>
-                <label class="btn btn-outline-unique" @click.prevent="handleAnswer">
+                <label class="btn btn-outline-unique mb-2" @click.prevent="handleAnswer">
                   <input type="radio" name="options" id="option2" value="f" />
                   {{currentQuestion.strinOptions[1]}}
                 </label>
@@ -69,9 +69,9 @@
       <div v-if="perc>=25 &&perc <=55">{{ $t('covid19.result_med')}}</div>
       <div v-if="perc>55">{{ $t('covid19.result_bad')}}</div>
       <div class="m-4">
-        <button class="btn btn-unique" v-if="perc>=25">{{ $t('covid19.call111')}}</button>
-        <button class="btn btn-unique">{{ $t('covid19.tips')}}</button>
-        <button class="btn btn-unique" @click.prevent="startQuiz">{{ $t('covid19.new_test')}}</button>
+        <button class="btn btn-unique mb-2" v-if="perc>=25">{{ $t('covid19.call111')}}</button>
+        <button class="btn btn-unique mb-2">{{ $t('covid19.tips')}}</button>
+        <button class="btn btn-unique mb-2" @click.prevent="startQuiz">{{ $t('covid19.new_test')}}</button>
       </div>
     </div>
   </div>
