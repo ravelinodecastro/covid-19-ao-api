@@ -43,7 +43,7 @@ html, body {
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     border-radius: .25rem;
-    object-fit: cover;
+
 }
 
 .image-flip:hover .frontside,
@@ -52,7 +52,7 @@ html, body {
     -moz-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    object-fit: cover;
+
 }
 
 .mainflip {
@@ -129,6 +129,7 @@ html, body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    object-fit: cover;
 }
 .bar{
     height: 4px;
