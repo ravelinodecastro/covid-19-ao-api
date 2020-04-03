@@ -2067,6 +2067,7 @@ __webpack_require__.r(__webpack_exports__);
       this.currentCount = 0;
       this.resultsStage = false;
       this.allMadeQuestions = [];
+      this.answerMulti = [];
       this.answers = [];
       this.answer = null;
       this.correct = 0;
@@ -20700,14 +20701,24 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "m-4" }, [
               _vm.perc >= 25
-                ? _c("button", { staticClass: "btn btn-unique mb-2" }, [
-                    _vm._v(_vm._s(_vm.$t("covid19.call111")))
-                  ])
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-unique mb-2",
+                      attrs: { href: "tel:111" }
+                    },
+                    [_vm._v(_vm._s(_vm.$t("covid19.call111")))]
+                  )
                 : _vm._e(),
               _vm._v(" "),
-              _c("button", { staticClass: "btn btn-unique mb-2" }, [
-                _vm._v(_vm._s(_vm.$t("covid19.tips")))
-              ]),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-unique mb-2",
+                  attrs: { href: "/tips" }
+                },
+                [_vm._v(_vm._s(_vm.$t("covid19.tips")))]
+              ),
               _vm._v(" "),
               _c(
                 "button",
@@ -35103,7 +35114,7 @@ __webpack_require__.r(__webpack_exports__);
       "s_loss_of_smell": "Loss of smell (no smell)",
       "s_loss_of_taste": "Loss of taste (no taste)",
       "q_took_medicines": "Did you take any medication for your symptoms?",
-      "tips_header": "Follow these tips, share with your friends and family, save your route and those you love."
+      "tips_header": "Follow these tips, share with your friends and family, save your life and those you love."
     },
     "pagination": {
       "previous": "&laquo; Previous",
@@ -35264,7 +35275,7 @@ __webpack_require__.r(__webpack_exports__);
       "btn_confirmation": "Confirmar la respuesta",
       "result_good": "Te ves bien y no tienes síntomas de COVID-19. Haga clic en el botón \"Consejos de prevención\", continúe cuidando a usted y a su familia ",
       "result_med": "Manténgase a salvo, cumpla con la cuarentena y, en caso de presentar continuamente los síntomas indicados, busque una unidad hospitalaria.",
-      "result_bad": "Su caso es preocupante, vaya a la unidad de hospital más cercana",
+      "result_bad": "Su caso es preocupante, vaya a la unidad hospitalaria más cercana",
       "tips": "Consejos de prevención",
       "call111": "Llamar 111",
       "new_test": "Nueva prueba",
@@ -35294,7 +35305,7 @@ __webpack_require__.r(__webpack_exports__);
       "s_loss_of_smell": "Pérdida del olfato (sin olor)",
       "s_loss_of_taste": "Pérdida de sabor (sin sabor)",
       "q_took_medicines": "¿Tomó algún medicamento para sus síntomas?",
-      "tips_header": "Siga estos consejos, comparta con sus amigos y familiares, guarde su ruta y a sus seres queridos."
+      "tips_header": "Siga estos consejos, comparta con sus amigos y familiares, salve su vida y a sus seres queridos."
     },
     "pagination": {
       "previous": "&laquo; Anterior",
@@ -35521,7 +35532,7 @@ __webpack_require__.r(__webpack_exports__);
       "s_loss_of_smell": "Perte d'odeur (pas d'odeur)",
       "s_loss_of_taste": "Perte de goût (pas de goût)",
       "q_took_medicines": "Avez-vous pris des médicaments pour vos symptômes?",
-      "tips_header": "Suivez ces conseils, partagez avec vos amis et votre famille, enregistrez votre itinéraire et ceux que vous aimez."
+      "tips_header": "Suivez ces conseils, partagez avec vos amis et votre famille, sauvez votre vie et ceux que vous aimez."
     },
     "pagination": {
       "previous": "&laquo; Précédent",
@@ -35706,13 +35717,13 @@ __webpack_require__.r(__webpack_exports__);
       "contribution": "Contribuição",
       "contribution_description": "Se és desenvolvedor, podes contribuir no projecto, pois ele é open source. Caso não sejas e ainda quiseres contribuir no projecto, podes ajudar no pagamento de um domínio (ex: covid-19-ao.com)",
       "test_header": "Teste online do Covid-19",
-      "test_p": "Este é um questionário que lhe permite facilmente ter um diaginóstico da doença Covid-19, causo pelo novo Corona vírus.",
-      "test_p2": "As perguntas são baseadas nas pesquisas feitas por especilistas de diferentes países e o resultado é com base nas respostas.",
+      "test_p": "Este é um questionário que lhe permite facilmente ter um diagnóstico da doença Covid-19, causado pelo novo Corona vírus.",
+      "test_p2": "As perguntas são baseadas nas pesquisas feitas por especialistas de diferentes países e o resultado é com base nas respostas.",
       "btn_start": "Iniciar o teste",
       "btn_confirmation": "Confirmar a resposta",
       "result_good": "Você aparenta estar bem e sem sintomas de COVID-19. Clique no botão \"Dicas de prevenção\", continue a cuidar de si e sua família",
-      "result_med": "Mantenha se previnido, cumpra a quarentena e em caso de apresentar continuamente os sintomas indicados, procure uma unidade hospital.",
-      "result_bad": "O seu caso é preocupante, dirija-se a uma unidade hospital mais próxima",
+      "result_med": "Mantenha-se previnido, cumpra a quarentena e em caso de apresentar continuamente os sintomas indicados, procure uma unidade hospitalar.",
+      "result_bad": "O seu caso é preocupante, dirija-se a uma unidade hospitalar mais próxima",
       "tips": "Dicas de prevenção",
       "call111": "Ligar para 111",
       "new_test": "Novo teste",
@@ -35730,7 +35741,7 @@ __webpack_require__.r(__webpack_exports__);
       "q_international_trip": "Fez alguma viagem internacional recentemente?",
       "q_approch": "Teve alguma aproximação com alguém que esteja infectado?",
       "q_symptoms": "Você teve algum desses sintomas?",
-      "s_coryza": "Coriza",
+      "s_coryza": "Corrimento de mucosa nasal (Coriza)",
       "s_stuffy_nose": "Nariz entupido",
       "s_tiredness": "Cansaço",
       "s_cough": "Tosse",
@@ -35739,10 +35750,10 @@ __webpack_require__.r(__webpack_exports__);
       "s_body_aches": "Dores no corpo ou mal estar",
       "s_sore_throat": "Dor de garganta",
       "s_diarrhea": "Diarréia ou dores abdominais",
-      "s_loss_of_smell": "Perda de olfato (não sentir cheiro)",
-      "s_loss_of_taste": "Perda do paladar (não sentir gosto)",
-      "q_took_medicines": "Você tomou algum medicamento para os seus sintomas?",
-      "tips_header": "Segue essas dicas, partilhe com seus amigos e familiares, salve a sua via e daqueles que você ama."
+      "s_loss_of_smell": "Perda de olfato",
+      "s_loss_of_taste": "Perda do paladar",
+      "q_took_medicines": "Você fez alguma medicação para os seus sintomas?",
+      "tips_header": "Siga as dicas, partilhe com seus amigos e familiares, salve a sua vida e daqueles que você ama."
     },
     "pagination": {
       "previous": "&laquo; Anterior",
@@ -35897,13 +35908,13 @@ __webpack_require__.r(__webpack_exports__);
       "contribution": "Contribuição",
       "contribution_description": "Se és desenvolvedor, podes contribuir no projecto, pois ele é open source. Caso não sejas e ainda quiseres contribuir no projecto, podes ajudar no pagamento de um domínio (ex: covid-19-ao.com)",
       "test_header": "Teste online do Covid-19",
-      "test_p": "Este é um questionário que lhe permite facilmente ter um diaginóstico da doença Covid-19, causo pelo novo Corona vírus.",
-      "test_p2": "As perguntas são baseadas nas pesquisas feitas por especilistas de diferentes países e o resultado é com base nas respostas.",
+      "test_p": "Este é um questionário que lhe permite facilmente ter um diagnóstico da doença Covid-19, causado pelo novo Corona vírus.",
+      "test_p2": "As perguntas são baseadas nas pesquisas feitas por especialistas de diferentes países e o resultado é com base nas respostas.",
       "btn_start": "Iniciar o teste",
       "btn_confirmation": "Confirmar a resposta",
       "result_good": "Você aparenta estar bem e sem sintomas de COVID-19. Clique no botão \"Dicas de prevenção\", continue a cuidar de si e sua família",
-      "result_med": "Mantenha se previnido, cumpra a quarentena e em caso de apresentar continuamente os sintomas indicados, procure uma unidade hospital.",
-      "result_bad": "O seu caso é preocupante, dirija-se a uma unidade hospital mais próxima",
+      "result_med": "Mantenha-se previnido, cumpra a quarentena e em caso de apresentar continuamente os sintomas indicados, procure uma unidade hospitalar.",
+      "result_bad": "O seu caso é preocupante, dirija-se a uma unidade hospitalar mais próxima",
       "tips": "Dicas de prevenção",
       "call111": "Ligar para 111",
       "new_test": "Novo teste",
@@ -35921,7 +35932,7 @@ __webpack_require__.r(__webpack_exports__);
       "q_international_trip": "Fez alguma viagem internacional recentemente?",
       "q_approch": "Teve alguma aproximação com alguém que esteja infectado?",
       "q_symptoms": "Você teve algum desses sintomas?",
-      "s_coryza": "Coriza",
+      "s_coryza": "Corrimento de mucosa nasal (Coriza)",
       "s_stuffy_nose": "Nariz entupido",
       "s_tiredness": "Cansaço",
       "s_cough": "Tosse",
@@ -35930,10 +35941,10 @@ __webpack_require__.r(__webpack_exports__);
       "s_body_aches": "Dores no corpo ou mal estar",
       "s_sore_throat": "Dor de garganta",
       "s_diarrhea": "Diarréia ou dores abdominais",
-      "s_loss_of_smell": "Perda de olfato (não sentir cheiro)",
-      "s_loss_of_taste": "Perda do paladar (não sentir gosto)",
-      "q_took_medicines": "Você tomou algum medicamento para os seus sintomas?",
-      "tips_header": "Segue essas dicas, partilhe com seus amigos e familiares, salve a sua via e daqueles que você ama."
+      "s_loss_of_smell": "Perda de olfato",
+      "s_loss_of_taste": "Perda do paladar",
+      "q_took_medicines": "Você fez alguma medicação para os seus sintomas?",
+      "tips_header": "Siga as dicas, partilhe com seus amigos e familiares, salve a sua vida e daqueles que você ama."
     },
     "pagination": {
       "previous": "&laquo; Anterior",

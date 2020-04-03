@@ -32,7 +32,7 @@ return [
     'btn_confirmation' => 'Confirmar la respuesta',
     'result_good' => 'Te ves bien y no tienes síntomas de COVID-19. Haga clic en el botón "Consejos de prevención", continúe cuidando a usted y a su familia ',
     'result_med' => 'Manténgase a salvo, cumpla con la cuarentena y, en caso de presentar continuamente los síntomas indicados, busque una unidad hospitalaria.',
-    'result_bad' => 'Su caso es preocupante, vaya a la unidad de hospital más cercana',
+    'result_bad' => 'Su caso es preocupante, vaya a la unidad hospitalaria más cercana',
     'tips' => 'Consejos de prevención',
     'call111' => 'Llamar 111',
     'new_test' => 'Nueva prueba',
@@ -69,5 +69,5 @@ return [
     's_loss_of_taste' => "Pérdida de sabor (sin sabor)",
     'q_took_medicines' => "¿Tomó algún medicamento para sus síntomas?",
 
-    'tips_header' => "Siga estos consejos, comparta con sus amigos y familiares, guarde su ruta y a sus seres queridos."
+    'tips_header' => "Siga estos consejos, comparta con sus amigos y familiares, salve su vida y a sus seres queridos."
 ];

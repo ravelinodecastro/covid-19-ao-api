@@ -68,5 +68,5 @@ return [
 
     'q_took_medicines' => "Did you take any medication for your symptoms?",
 
-    'tips_header' => "Follow these tips, share with your friends and family, save your route and those you love."
+    'tips_header' => "Follow these tips, share with your friends and family, save your life and those you love."
 ];

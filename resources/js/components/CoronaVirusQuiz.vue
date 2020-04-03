@@ -69,8 +69,8 @@
       <div v-if="perc>=25 &&perc <=55">{{ $t('covid19.result_med')}}</div>
       <div v-if="perc>55">{{ $t('covid19.result_bad')}}</div>
       <div class="m-4">
-        <button class="btn btn-unique mb-2" v-if="perc>=25">{{ $t('covid19.call111')}}</button>
-        <button class="btn btn-unique mb-2">{{ $t('covid19.tips')}}</button>
+        <a href="tel:111" class="btn btn-unique mb-2" v-if="perc>=25">{{ $t('covid19.call111')}}</a>
+        <a href="/tips" class="btn btn-unique mb-2">{{ $t('covid19.tips')}}</a>
         <button class="btn btn-unique mb-2" @click.prevent="startQuiz">{{ $t('covid19.new_test')}}</button>
       </div>
     </div>
@@ -198,6 +198,7 @@ export default {
       this.currentCount = 0;
       this.resultsStage = false;
       this.allMadeQuestions = [];
+      this.answerMulti = [];
       this.answers = [];
       this.answer = null;
       this.correct = 0;

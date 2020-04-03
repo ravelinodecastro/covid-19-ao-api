@@ -70,5 +70,5 @@ return [
     
     "q_took_medicines" => "Avez-vous pris des médicaments pour vos symptômes?",
 
-    'tips_header' => "Suivez ces conseils, partagez avec vos amis et votre famille, enregistrez votre itinéraire et ceux que vous aimez."
+    'tips_header' => "Suivez ces conseils, partagez avec vos amis et votre famille, sauvez votre vie et ceux que vous aimez."
 ];
