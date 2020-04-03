@@ -9,7 +9,7 @@ Covid-19 Ao Api is an Angolan API created to show in real time the information a
 ## Usage (Javascript)
 
 ```javascript
-fetch(`https://angola-pna.herokuapp.com/api/general/`, {
+fetch(`https://covid-19-ao.herokuapp.com/api/general/`, {
         method: 'get',
         headers: {
             'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ fetch(`https://angola-pna.herokuapp.com/api/general/`, {
 ## Usage (Php)
 
 ```php
-$url ='https://angola-pna.herokuapp.com/api/general/';
+$url ='https://covid-19-ao.herokuapp.com/api/general/';
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 
@@ -45,7 +45,7 @@ echo $response;
 
 ```python
 
-response = requests.get('https://angola-pna.herokuapp.com/api/general/')
+response = requests.get('https://covid-19-ao.herokuapp.com/api/general/')
 print(response)
 ```
 
@@ -56,7 +56,7 @@ print(response)
 import 'package:http/http.dart' as http;
 
 Future<http.Response> fetchPhone() {
-  return http.get('https://angola-pna.herokuapp.com/api/general/');
+  return http.get('https://covid-19-ao.herokuapp.com/api/general/');
 }
 ```
 
@@ -71,7 +71,7 @@ import (
 )
 
 func Fetch() {
-  url := fmt.Sprintf("https://angola-pna.herokuapp.com/api/general")
+  url := fmt.Sprintf("https://covid-19-ao.herokuapp.com/api/general/")
 
   client := &http.Client {}
   req, err := http.NewRequest("GET", url, nil)
