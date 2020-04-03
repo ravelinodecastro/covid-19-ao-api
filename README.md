@@ -6,6 +6,16 @@ Covid-19 Ao Api is an Angolan API created to show in real time the information a
 
 [Click here to see results in your browser](https://covid-19-ao.herokuapp.com/api/general)
 
+## Covid-19 Ao (Plataform)
+[In the home directory] (https://covid-19-ao.herokuapp.com/), you can find the platform, which can provide the same results as the API, accompanied also with "prevention tips" and one online for covid-19 dysguinostico based on the answers.
+
+## Endpoitns
+| Endpoint       | Description   | Type     | Description   |
+| ---            | ---           | ---      | ---           |
+| https://covid-19-ao.herokuapp.com/api/general | It returns the lastest update from governmant reports. | Object |
+| https://covid-19-ao.herokuapp.com/api/report | It returns the updates from each day, since the API was created. | Array of objects |
+| https://covid-19-ao.herokuapp.com/api/tips?lang=pt | It returns prevention tips in portuguese. You can change the language (available: en, pt, es, fr) | Array of objects |
+
 ## Usage (Javascript)
 
 ```javascript
