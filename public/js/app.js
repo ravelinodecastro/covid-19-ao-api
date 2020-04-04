@@ -1991,6 +1991,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   directives: {
@@ -2050,7 +2051,7 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         text: this.$t("covid19.q_symptoms"),
         answers: [this.$t("covid19.s_coryza"), this.$t("covid19.s_stuffy_nose"), this.$t("covid19.s_tiredness"), this.$t("covid19.s_cough"), this.$t("covid19.s_shortness_of_breath"), this.$t("covid19.s_headache"), this.$t("covid19.s_body_aches"), this.$t("covid19.s_sore_throat"), this.$t("covid19.s_diarrhea"), this.$t("covid19.s_loss_of_smell"), this.$t("covid19.s_loss_of_taste")],
-        correct: [this.$t("covid19.s_coryza"), this.$t("covid19.s_tiredness"), this.$t("covid19.s_stuffy_nose"), this.$t("covid19.s_cough"), this.$t("covid19.s_body_aches"), this.$t("covid19.s_sore_throat"), this.$t("covid19.s_shortness_of_breath"), this.$t("covid19.s_loss_of_smell")],
+        correct: [this.$t("covid19.s_coryza"), this.$t("covid19.s_tiredness"), this.$t("covid19.s_stuffy_nose"), this.$t("covid19.s_cough"), this.$t("covid19.s_body_aches"), this.$t("covid19.s_sore_throat"), this.$t("covid19.s_diarrhea"), this.$t("covid19.s_shortness_of_breath"), this.$t("covid19.s_loss_of_smell"), this.$t("covid19.s_loss_of_taste")],
         type: "mcmr"
       }, {
         text: this.$t("covid19.q_took_medicines"),
@@ -2128,8 +2129,6 @@ __webpack_require__.r(__webpack_exports__);
         if (_this2.currentCount + 1 === _this2.questions.length) {
           _this2.handleResults();
 
-          _this2.questionStage = false;
-          _this2.resultsStage = true;
           controller = false;
         }
 
@@ -2185,11 +2184,13 @@ __webpack_require__.r(__webpack_exports__);
             }).length;
 
             _this3.correct = _this3.correct + confirmed;
-            extra = extra + _this3.answers[index].length;
+            extra = extra + a.correct.length;
           } else if (_this3.answers[index] === a.correct && !a.gender) _this3.correct++;
         });
 
         _this3.perc = (_this3.correct / (_this3.allMadeQuestions.length - 1 + extra) * 100).toFixed(2);
+        _this3.questionStage = false;
+        _this3.resultsStage = true;
         loader.hide();
       }, 500);
     }
@@ -20413,328 +20414,31 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-12 mb-4" }, [
-    _c("h2", { staticClass: "text-center" }, [
-      _vm._v(_vm._s(_vm.$t("covid19.test_header")))
-    ]),
-    _vm._v(" "),
-    _vm.introStage
-      ? _c(
-          "div",
-          {
-            ref: "formContainer",
-            staticClass: "text-center p-4",
-            staticStyle: { "min-height": "16em" }
-          },
-          [
-            _c("p", [_vm._v(_vm._s(_vm.$t("covid19.test_p")))]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.$t("covid19.test_p2")))]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-unique",
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    return _vm.startQuiz($event)
-                  }
-                }
-              },
-              [_vm._v(_vm._s(_vm.$t("covid19.btn_start")))]
-            )
-          ]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.questionStage
-      ? _c("div", { staticClass: "row d-flex justify-content-center" }, [
-          _c("div", { staticClass: "col-sm-6 m-4" }, [
-            _c(
-              "div",
-              {
-                ref: "formContainer",
-                staticClass: "text-center card",
-                staticStyle: { "min-height": "14em" }
-              },
-              [
-                _c("div", { staticClass: "card-body p-4" }, [
-                  _c("h5", { staticClass: "font-weight-bold" }, [
-                    _vm._v(_vm._s(_vm.currentQuestion.text))
-                  ]),
-                  _vm._v(" "),
-                  _vm.currentQuestion.type === "tf"
-                    ? _c("div", { staticClass: "m-4" }, [
-                        _c(
-                          "div",
-                          {
-                            directives: [
-                              {
-                                name: "radio",
-                                rawName: "v-radio",
-                                value: _vm.answer,
-                                expression: "answer"
-                              }
-                            ],
-                            staticClass: "btn-group-toggle",
-                            attrs: { "data-toggle": "buttons" }
-                          },
-                          [
-                            _c(
-                              "label",
-                              {
-                                staticClass: "btn btn-outline-unique mb-2",
-                                on: {
-                                  click: function($event) {
-                                    $event.preventDefault()
-                                    return _vm.handleAnswer($event)
-                                  }
-                                }
-                              },
-                              [
-                                _c("input", {
-                                  attrs: {
-                                    type: "radio",
-                                    name: "options",
-                                    id: "option1",
-                                    value: "t"
-                                  }
-                                }),
-                                _vm._v(
-                                  "\n                " +
-                                    _vm._s(
-                                      _vm.currentQuestion.strinOptions[0]
-                                    ) +
-                                    "\n              "
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "label",
-                              {
-                                staticClass: "btn btn-outline-unique mb-2",
-                                on: {
-                                  click: function($event) {
-                                    $event.preventDefault()
-                                    return _vm.handleAnswer($event)
-                                  }
-                                }
-                              },
-                              [
-                                _c("input", {
-                                  attrs: {
-                                    type: "radio",
-                                    name: "options",
-                                    id: "option2",
-                                    value: "f"
-                                  }
-                                }),
-                                _vm._v(
-                                  "\n                " +
-                                    _vm._s(
-                                      _vm.currentQuestion.strinOptions[1]
-                                    ) +
-                                    "\n              "
-                                )
-                              ]
-                            )
-                          ]
-                        )
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.currentQuestion.type === "mcmr"
-                    ? _c(
-                        "div",
-                        [
-                          _vm._l(_vm.currentQuestion.answers, function(
-                            mcanswer,
-                            index
-                          ) {
-                            return _c("div", { key: index }, [
-                              _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "custom-control custom-checkbox mr-sm-2"
-                                },
-                                [
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.answerMulti,
-                                        expression: "answerMulti"
-                                      }
-                                    ],
-                                    staticClass: "custom-control-input",
-                                    attrs: {
-                                      type: "checkbox",
-                                      name: "mcmr",
-                                      id: "answer" + index
-                                    },
-                                    domProps: {
-                                      value: mcanswer,
-                                      checked: Array.isArray(_vm.answerMulti)
-                                        ? _vm._i(_vm.answerMulti, mcanswer) > -1
-                                        : _vm.answerMulti
-                                    },
-                                    on: {
-                                      change: function($event) {
-                                        var $$a = _vm.answerMulti,
-                                          $$el = $event.target,
-                                          $$c = $$el.checked ? true : false
-                                        if (Array.isArray($$a)) {
-                                          var $$v = mcanswer,
-                                            $$i = _vm._i($$a, $$v)
-                                          if ($$el.checked) {
-                                            $$i < 0 &&
-                                              (_vm.answerMulti = $$a.concat([
-                                                $$v
-                                              ]))
-                                          } else {
-                                            $$i > -1 &&
-                                              (_vm.answerMulti = $$a
-                                                .slice(0, $$i)
-                                                .concat($$a.slice($$i + 1)))
-                                          }
-                                        } else {
-                                          _vm.answerMulti = $$c
-                                        }
-                                      }
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "label",
-                                    {
-                                      staticClass: "custom-control-label",
-                                      attrs: { for: "answer" + index }
-                                    },
-                                    [_vm._v(_vm._s(mcanswer))]
-                                  )
-                                ]
-                              )
-                            ])
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn btn-unique mt-2",
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                  return _vm.handleAnswer($event)
-                                }
-                              }
-                            },
-                            [_vm._v(_vm._s(_vm.$t("covid19.btn_confirmation")))]
-                          )
-                        ],
-                        2
-                      )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.currentQuestion.type === "mc"
-                    ? _c(
-                        "div",
-                        _vm._l(_vm.currentQuestion.answers, function(
-                          mcanswer,
-                          index
-                        ) {
-                          return _c("div", { key: index }, [
-                            _c("input", {
-                              directives: [
-                                {
-                                  name: "model",
-                                  rawName: "v-model",
-                                  value: _vm.answer,
-                                  expression: "answer"
-                                }
-                              ],
-                              attrs: {
-                                type: "radio",
-                                id: "answer" + index,
-                                name: "currentQuestion"
-                              },
-                              domProps: {
-                                value: mcanswer,
-                                checked: _vm._q(_vm.answer, mcanswer)
-                              },
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                  return _vm.handleAnswer($event)
-                                },
-                                change: function($event) {
-                                  _vm.answer = mcanswer
-                                }
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("label", { attrs: { for: "answer" + index } }, [
-                              _vm._v(_vm._s(mcanswer))
-                            ]),
-                            _vm._v(" "),
-                            _c("br")
-                          ])
-                        }),
-                        0
-                      )
-                    : _vm._e()
-                ])
-              ]
-            )
-          ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.resultsStage
-      ? _c(
-          "div",
-          {
-            ref: "formContainer",
-            staticClass: "text-center p-4",
-            staticStyle: { "min-height": "16em" }
-          },
-          [
-            _vm.perc < 25
-              ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_good")))])
-              : _vm.perc >= 25 && _vm.perc <= 55
-              ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_med")))])
-              : _vm.perc > 55
-              ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_bad")))])
-              : _vm._e(),
-            _vm._v(" "),
-            _c("div", { staticClass: "m-4" }, [
-              _vm.perc >= 25
-                ? _c(
-                    "a",
-                    {
-                      staticClass: "btn btn-unique mb-2",
-                      attrs: { href: "tel:111" }
-                    },
-                    [_vm._v(_vm._s(_vm.$t("covid19.call111")))]
-                  )
-                : _vm._e(),
+  return _c(
+    "div",
+    { staticClass: "col-12 mb-4", staticStyle: { "min-height": "16em" } },
+    [
+      _c("h2", { staticClass: "text-center" }, [
+        _vm._v(_vm._s(_vm.$t("covid19.test_header")))
+      ]),
+      _vm._v(" "),
+      _vm.introStage
+        ? _c(
+            "div",
+            {
+              ref: "formContainer",
+              staticClass: "text-center p-4",
+              staticStyle: { "min-height": "16em" }
+            },
+            [
+              _c("p", [_vm._v(_vm._s(_vm.$t("covid19.test_p")))]),
               _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-unique mb-2",
-                  attrs: { href: "/tips" }
-                },
-                [_vm._v(_vm._s(_vm.$t("covid19.tips")))]
-              ),
+              _c("p", [_vm._v(_vm._s(_vm.$t("covid19.test_p2")))]),
               _vm._v(" "),
               _c(
                 "button",
                 {
-                  staticClass: "btn btn-unique mb-2",
+                  staticClass: "btn btn-unique",
                   on: {
                     click: function($event) {
                       $event.preventDefault()
@@ -20742,13 +20446,325 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v(_vm._s(_vm.$t("covid19.new_test")))]
+                [_vm._v(_vm._s(_vm.$t("covid19.btn_start")))]
+              )
+            ]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.questionStage
+        ? _c("div", { staticClass: "row d-flex justify-content-center" }, [
+            _c("div", { staticClass: "col-sm-6 m-4" }, [
+              _c(
+                "div",
+                {
+                  ref: "formContainer",
+                  staticClass: "text-center card",
+                  staticStyle: { "min-height": "14em" }
+                },
+                [
+                  _c("div", { staticClass: "card-body p-4" }, [
+                    _c("h5", { staticClass: "font-weight-bold" }, [
+                      _vm._v(_vm._s(_vm.currentQuestion.text))
+                    ]),
+                    _vm._v(" "),
+                    _vm.currentQuestion.type === "tf"
+                      ? _c("div", { staticClass: "m-4" }, [
+                          _c(
+                            "div",
+                            {
+                              directives: [
+                                {
+                                  name: "radio",
+                                  rawName: "v-radio",
+                                  value: _vm.answer,
+                                  expression: "answer"
+                                }
+                              ],
+                              staticClass: "btn-group-toggle",
+                              attrs: { "data-toggle": "buttons" }
+                            },
+                            [
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "btn btn-outline-unique mb-2",
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      return _vm.handleAnswer($event)
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "radio",
+                                      name: "options",
+                                      id: "option1",
+                                      value: "t"
+                                    }
+                                  }),
+                                  _vm._v(
+                                    "\n                " +
+                                      _vm._s(
+                                        _vm.currentQuestion.strinOptions[0]
+                                      ) +
+                                      "\n              "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                {
+                                  staticClass: "btn btn-outline-unique mb-2",
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      return _vm.handleAnswer($event)
+                                    }
+                                  }
+                                },
+                                [
+                                  _c("input", {
+                                    attrs: {
+                                      type: "radio",
+                                      name: "options",
+                                      id: "option2",
+                                      value: "f"
+                                    }
+                                  }),
+                                  _vm._v(
+                                    "\n                " +
+                                      _vm._s(
+                                        _vm.currentQuestion.strinOptions[1]
+                                      ) +
+                                      "\n              "
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.currentQuestion.type === "mcmr"
+                      ? _c(
+                          "div",
+                          [
+                            _vm._l(_vm.currentQuestion.answers, function(
+                              mcanswer,
+                              index
+                            ) {
+                              return _c("div", { key: index }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "custom-control custom-checkbox mr-sm-2"
+                                  },
+                                  [
+                                    _c("input", {
+                                      directives: [
+                                        {
+                                          name: "model",
+                                          rawName: "v-model",
+                                          value: _vm.answerMulti,
+                                          expression: "answerMulti"
+                                        }
+                                      ],
+                                      staticClass: "custom-control-input",
+                                      attrs: {
+                                        type: "checkbox",
+                                        name: "mcmr",
+                                        id: "answer" + index
+                                      },
+                                      domProps: {
+                                        value: mcanswer,
+                                        checked: Array.isArray(_vm.answerMulti)
+                                          ? _vm._i(_vm.answerMulti, mcanswer) >
+                                            -1
+                                          : _vm.answerMulti
+                                      },
+                                      on: {
+                                        change: function($event) {
+                                          var $$a = _vm.answerMulti,
+                                            $$el = $event.target,
+                                            $$c = $$el.checked ? true : false
+                                          if (Array.isArray($$a)) {
+                                            var $$v = mcanswer,
+                                              $$i = _vm._i($$a, $$v)
+                                            if ($$el.checked) {
+                                              $$i < 0 &&
+                                                (_vm.answerMulti = $$a.concat([
+                                                  $$v
+                                                ]))
+                                            } else {
+                                              $$i > -1 &&
+                                                (_vm.answerMulti = $$a
+                                                  .slice(0, $$i)
+                                                  .concat($$a.slice($$i + 1)))
+                                            }
+                                          } else {
+                                            _vm.answerMulti = $$c
+                                          }
+                                        }
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "label",
+                                      {
+                                        staticClass: "custom-control-label",
+                                        attrs: { for: "answer" + index }
+                                      },
+                                      [_vm._v(_vm._s(mcanswer))]
+                                    )
+                                  ]
+                                )
+                              ])
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-unique mt-2",
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    return _vm.handleAnswer($event)
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.$t("covid19.btn_confirmation"))
+                                )
+                              ]
+                            )
+                          ],
+                          2
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.currentQuestion.type === "mc"
+                      ? _c(
+                          "div",
+                          _vm._l(_vm.currentQuestion.answers, function(
+                            mcanswer,
+                            index
+                          ) {
+                            return _c("div", { key: index }, [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.answer,
+                                    expression: "answer"
+                                  }
+                                ],
+                                attrs: {
+                                  type: "radio",
+                                  id: "answer" + index,
+                                  name: "currentQuestion"
+                                },
+                                domProps: {
+                                  value: mcanswer,
+                                  checked: _vm._q(_vm.answer, mcanswer)
+                                },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    return _vm.handleAnswer($event)
+                                  },
+                                  change: function($event) {
+                                    _vm.answer = mcanswer
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                { attrs: { for: "answer" + index } },
+                                [_vm._v(_vm._s(mcanswer))]
+                              ),
+                              _vm._v(" "),
+                              _c("br")
+                            ])
+                          }),
+                          0
+                        )
+                      : _vm._e()
+                  ])
+                ]
               )
             ])
-          ]
-        )
-      : _vm._e()
-  ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.resultsStage
+        ? _c(
+            "div",
+            {
+              ref: "formContainer",
+              staticClass: "text-center p-4",
+              staticStyle: { "min-height": "16em" }
+            },
+            [
+              _c("h5", { staticClass: "font-weight-bold" }, [
+                _vm._v(_vm._s(_vm.$t("covid19.result")) + ":")
+              ]),
+              _vm._v(" "),
+              _vm.perc < 32
+                ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_good")))])
+                : _vm.perc >= 32 && _vm.perc <= 50
+                ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_med")))])
+                : _vm.perc > 50
+                ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_bad")))])
+                : _vm._e(),
+              _vm._v(" "),
+              _c("div", { staticClass: "m-4" }, [
+                _vm.perc >= 32
+                  ? _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-unique mb-2",
+                        attrs: { href: "tel:111" }
+                      },
+                      [_vm._v(_vm._s(_vm.$t("covid19.call111")))]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-unique mb-2",
+                    attrs: { href: "/tips" }
+                  },
+                  [_vm._v(_vm._s(_vm.$t("covid19.tips")))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-unique mb-2",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        return _vm.startQuiz($event)
+                      }
+                    }
+                  },
+                  [_vm._v(_vm._s(_vm.$t("covid19.new_test")))]
+                )
+              ])
+            ]
+          )
+        : _vm._e()
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35093,8 +35109,9 @@ __webpack_require__.r(__webpack_exports__);
       "test_p2": "The questions are based on research done by experts from different countries and the result is based on the answers.",
       "btn_start": "Start the test",
       "btn_confirmation": "Confirm the answer",
+      "result": "Result",
       "result_good": "You look fine and have no symptoms of COVID-19. Click on the \"Prevention Tips\" button, continue to take care of yourself and your family",
-      "result_med": "Keep safe, comply with the quarantine and in case of continually presenting the indicated symptoms, look for a hospital unit.",
+      "result_med": "It does not seem to be serious, however we advise you to return to the test if you have other symptoms or signs. Stay forewarned, comply with the quarantine and in an emergency call 111.",
       "result_bad": "Your case is worrying, go to the nearest hospital unit",
       "call111": "Call 111",
       "tips": "Prevention tips",
@@ -35288,8 +35305,9 @@ __webpack_require__.r(__webpack_exports__);
       "test_p2": "Las preguntas se basan en investigaciones realizadas por expertos de diferentes países y el resultado se basa en las respuestas",
       "btn_start": "Iniciar la prueba",
       "btn_confirmation": "Confirmar la respuesta",
+      "result": "Resultado",
       "result_good": "Te ves bien y no tienes síntomas de COVID-19. Haga clic en el botón \"Consejos de prevención\", continúe cuidando a usted y a su familia ",
-      "result_med": "Manténgase a salvo, cumpla con la cuarentena y, en caso de presentar continuamente los síntomas indicados, busque una unidad hospitalaria.",
+      "result_med": "No parece ser grave, sin embargo, le recomendamos que regrese a la prueba si tiene otros síntomas o signos. Manténgase advertido, cumpla con la cuarentena y en una llamada de emergencia 111.",
       "result_bad": "Su caso es preocupante, vaya a la unidad hospitalaria más cercana",
       "tips": "Consejos de prevención",
       "call111": "Llamar 111",
@@ -35519,8 +35537,9 @@ __webpack_require__.r(__webpack_exports__);
       "test_p2": "Les questions sont basées sur des enquêtes réalisées par des experts de différents pays et le résultat est basé sur les réponses.",
       "btn_start": "Lancer le test",
       "btn_confirmation": "Confirmer la réponse",
+      "result": "Résultat",
       "result_good": "Vous avez l'air bien et ne présentez aucun symptôme de COVID-19. Cliquez sur le bouton 'Conseils de prévention', continuez à prendre soin de vous et de votre famille",
-      "result_med": "Restez en sécurité, respectez la quarantaine et en cas de présentation continue des symptômes indiqués, recherchez une unité hospitalière.",
+      "result_med": "Cela ne semble pas être grave, cependant nous vous conseillons de revenir au test si vous avez d'autres symptômes ou signes. Restez prévenu, respectez la quarantaine et appelez en urgence 111.",
       "result_bad": "Votre cas est inquiétant, rendez-vous à l'hôpital le plus proche",
       "tips": "Conseils de prévention",
       "call111": "Appelez le 111",
@@ -35744,8 +35763,9 @@ __webpack_require__.r(__webpack_exports__);
       "test_p2": "As perguntas são baseadas nas pesquisas feitas por especialistas de diferentes países e o resultado é com base nas respostas.",
       "btn_start": "Iniciar o teste",
       "btn_confirmation": "Confirmar a resposta",
+      "result": "Resultado",
       "result_good": "Você aparenta estar bem e sem sintomas de COVID-19. Clique no botão \"Dicas de prevenção\", continue a cuidar de si e sua família",
-      "result_med": "Mantenha-se previnido, cumpra a quarentena e em caso de apresentar continuamente os sintomas indicados, procure uma unidade hospitalar.",
+      "result_med": "Não parece ser grave, no entanto aconselhamos a voltar  fazer o teste caso venha apresentar outros sintomas ou indícios. Mantenha-se previnido, cumpra a quarentena e em caso de emergência ligue para 111.",
       "result_bad": "O seu caso é preocupante, dirija-se a uma unidade hospitalar mais próxima",
       "tips": "Dicas de prevenção",
       "call111": "Ligar para 111",
@@ -35939,8 +35959,9 @@ __webpack_require__.r(__webpack_exports__);
       "test_p2": "As perguntas são baseadas nas pesquisas feitas por especialistas de diferentes países e o resultado é com base nas respostas.",
       "btn_start": "Iniciar o teste",
       "btn_confirmation": "Confirmar a resposta",
+      "result": "Resultado",
       "result_good": "Você aparenta estar bem e sem sintomas de COVID-19. Clique no botão \"Dicas de prevenção\", continue a cuidar de si e sua família",
-      "result_med": "Mantenha-se previnido, cumpra a quarentena e em caso de apresentar continuamente os sintomas indicados, procure uma unidade hospitalar.",
+      "result_med": "Não parece ser grave, no entanto aconselhamos a voltar  fazer o teste caso venha apresentar outros sintomas ou indícios. Mantenha-se previnido, cumpra a quarentena e em caso de emergência ligue para 111.",
       "result_bad": "O seu caso é preocupante, dirija-se a uma unidade hospitalar mais próxima",
       "tips": "Dicas de prevenção",
       "call111": "Ligar para 111",

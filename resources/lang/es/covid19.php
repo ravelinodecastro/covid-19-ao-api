@@ -30,8 +30,9 @@ return [
     'btn_start' => 'Iniciar la prueba',
     
     'btn_confirmation' => 'Confirmar la respuesta',
+    'result'=>'Resultado',
     'result_good' => 'Te ves bien y no tienes síntomas de COVID-19. Haga clic en el botón "Consejos de prevención", continúe cuidando a usted y a su familia ',
-    'result_med' => 'Manténgase a salvo, cumpla con la cuarentena y, en caso de presentar continuamente los síntomas indicados, busque una unidad hospitalaria.',
+    'result_med' => 'No parece ser grave, sin embargo, le recomendamos que regrese a la prueba si tiene otros síntomas o signos. Manténgase advertido, cumpla con la cuarentena y en una llamada de emergencia 111.',
     'result_bad' => 'Su caso es preocupante, vaya a la unidad hospitalaria más cercana',
     'tips' => 'Consejos de prevención',
     'call111' => 'Llamar 111',

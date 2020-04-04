@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 mb-4">
+  <div class="col-12 mb-4" style="min-height: 16em;">
     <h2 class="text-center">{{ $t('covid19.test_header')}}</h2>
     <div class="text-center p-4" v-if="introStage" ref="formContainer" style="min-height: 16em;">
       <p>{{ $t('covid19.test_p')}}</p>
@@ -65,11 +65,12 @@
     </div>
 
     <div class="text-center p-4" v-if="resultsStage" ref="formContainer" style="min-height: 16em;">
-      <div v-if="perc<25">{{ $t('covid19.result_good')}}</div>
-      <div v-else-if="perc>=25 && perc <=55">{{ $t('covid19.result_med')}}</div>
-      <div v-else-if="perc>55">{{ $t('covid19.result_bad')}}</div>
+      <h5 class="font-weight-bold">{{ $t('covid19.result')}}:</h5>
+      <div v-if="perc<32">{{ $t('covid19.result_good')}}</div>
+      <div v-else-if="perc>=32 && perc <=50">{{ $t('covid19.result_med')}}</div>
+      <div v-else-if="perc>50">{{ $t('covid19.result_bad')}}</div>
       <div class="m-4">
-        <a href="tel:111" class="btn btn-unique mb-2" v-if="perc>=25">{{ $t('covid19.call111')}}</a>
+        <a href="tel:111" class="btn btn-unique mb-2" v-if="perc>=32">{{ $t('covid19.call111')}}</a>
         <a href="/tips" class="btn btn-unique mb-2">{{ $t('covid19.tips')}}</a>
         <button class="btn btn-unique mb-2" @click.prevent="startQuiz">{{ $t('covid19.new_test')}}</button>
       </div>
@@ -178,8 +179,10 @@ export default {
             this.$t("covid19.s_cough"),
             this.$t("covid19.s_body_aches"),
             this.$t("covid19.s_sore_throat"),
+            this.$t("covid19.s_diarrhea"),
             this.$t("covid19.s_shortness_of_breath"),
-            this.$t("covid19.s_loss_of_smell")
+            this.$t("covid19.s_loss_of_smell"),
+            this.$t("covid19.s_loss_of_taste")
           ],
           type: "mcmr"
         },
@@ -256,8 +259,7 @@ export default {
         let controller = true;
         if (this.currentCount + 1 === this.questions.length) {
           this.handleResults();
-          this.questionStage = false;
-          this.resultsStage = true;
+
           controller = false;
         }
 
@@ -316,7 +318,7 @@ export default {
             ).length;
             this.correct = this.correct + confirmed;
 
-            extra = extra + this.answers[index].length;
+            extra = extra + a.correct.length;
           } else if (this.answers[index] === a.correct && !a.gender)
             this.correct++;
         });
@@ -325,6 +327,8 @@ export default {
           (this.correct / (this.allMadeQuestions.length - 1 + extra)) *
           100
         ).toFixed(2);
+        this.questionStage = false;
+        this.resultsStage = true;
 
         loader.hide();
       }, 500);

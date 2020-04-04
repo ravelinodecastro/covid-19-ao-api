@@ -31,8 +31,9 @@ return [
     "btn_start" => "Lancer le test",
     
     "btn_confirmation" => "Confirmer la réponse",
+    'result'=>'Résultat',
     "result_good" => "Vous avez l'air bien et ne présentez aucun symptôme de COVID-19. Cliquez sur le bouton 'Conseils de prévention', continuez à prendre soin de vous et de votre famille",
-    "result_med" => "Restez en sécurité, respectez la quarantaine et en cas de présentation continue des symptômes indiqués, recherchez une unité hospitalière.",
+    "result_med" => "Cela ne semble pas être grave, cependant nous vous conseillons de revenir au test si vous avez d'autres symptômes ou signes. Restez prévenu, respectez la quarantaine et appelez en urgence 111.",
     "result_bad" => "Votre cas est inquiétant, rendez-vous à l'hôpital le plus proche",
     "tips" => "Conseils de prévention",
     'call111' => 'Appelez le 111',

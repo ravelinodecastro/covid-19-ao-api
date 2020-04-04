@@ -31,8 +31,9 @@ return [
     'btn_start' => 'Start the test',
     
     'btn_confirmation' => 'Confirm the answer',
+    'result'=>'Result',
     'result_good' => 'You look fine and have no symptoms of COVID-19. Click on the "Prevention Tips" button, continue to take care of yourself and your family',
-    'result_med' => 'Keep safe, comply with the quarantine and in case of continually presenting the indicated symptoms, look for a hospital unit.',
+    'result_med' => 'It does not seem to be serious, however we advise you to return to the test if you have other symptoms or signs. Stay forewarned, comply with the quarantine and in an emergency call 111.',
     'result_bad' => 'Your case is worrying, go to the nearest hospital unit',
     'call111' => 'Call 111',
     'tips' => 'Prevention tips',

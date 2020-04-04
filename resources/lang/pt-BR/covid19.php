@@ -32,8 +32,9 @@ return [
     'btn_start'=>'Iniciar o teste',
 
     'btn_confirmation'=>'Confirmar a resposta',
+    'result'=>'Resultado',
     'result_good'=>'Você aparenta estar bem e sem sintomas de COVID-19. Clique no botão "Dicas de prevenção", continue a cuidar de si e sua família',
-    'result_med'=>'Mantenha-se previnido, cumpra a quarentena e em caso de apresentar continuamente os sintomas indicados, procure uma unidade hospitalar.',
+    'result_med'=>'Não parece ser grave, no entanto aconselhamos a voltar  fazer o teste caso venha apresentar outros sintomas ou indícios. Mantenha-se previnido, cumpra a quarentena e em caso de emergência ligue para 111.',
     'result_bad'=>'O seu caso é preocupante, dirija-se a uma unidade hospitalar mais próxima',
     'tips'=>'Dicas de prevenção',
     'call111'=>'Ligar para 111',
