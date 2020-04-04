@@ -2022,7 +2022,13 @@ __webpack_require__.r(__webpack_exports__);
           correct: "f"
         }]
       }, {
-        text: this.$t("covid19.q_old_preg"),
+        text: this.$t("covid19.q_gender"),
+        gender: true,
+        type: "tf",
+        strinOptions: [this.$t("covid19.g_m"), this.$t("covid19.g_f")],
+        correct: "t"
+      }, {
+        text: this.$t("covid19.q_old"),
         type: "tf",
         strinOptions: [this.$t("covid19.yes"), this.$t("covid19.no")],
         correct: "t"
@@ -2057,6 +2063,7 @@ __webpack_require__.r(__webpack_exports__);
       allMadeQuestions: [],
       answers: [],
       answerMulti: [],
+      gender: "f",
       answer: null,
       correct: 0,
       perc: null
@@ -2068,6 +2075,7 @@ __webpack_require__.r(__webpack_exports__);
       this.resultsStage = false;
       this.allMadeQuestions = [];
       this.answerMulti = [];
+      this.gender = "f";
       this.answers = [];
       this.answer = null;
       this.correct = 0;
@@ -2102,7 +2110,8 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(function () {
         var q = _this2.questions[_this2.currentCount];
         var qa = {
-          inSub: _this2.currentQuestion,
+          gender: _this2.currentQuestion.gender,
+          inSub: _this2.currentQuestion.inSub,
           question: _this2.currentQuestion.text,
           correct: _this2.currentQuestion.correct,
           answer: _this2.answerMulti.length > 0 ? _this2.answerMulti : _this2.answer,
@@ -2124,12 +2133,18 @@ __webpack_require__.r(__webpack_exports__);
           controller = false;
         }
 
+        if (_this2.currentQuestion.gender) {
+          _this2.gender = _this2.answer;
+          _this2.questions[2].text = _this2.gender == "f" ? _this2.$t("covid19.q_old_preg") : _this2.$t("covid19.q_old");
+        }
+
         if (q.sub && q.toNextMustBeCorrect && qa.answer == qa.correct || qa.inSub && qa.question == (q.subQuestion ? q.subQuestion.slice(-1)[0].text : "not_sub")) {
           q.subQuestion.forEach(function (element) {
             if (!_this2.allMadeQuestions.some(function (el) {
               return el.question == element.text;
             })) {
               _this2.currentQuestion = {
+                gender: element.gender,
                 inSub: true,
                 text: element.text,
                 type: element.type,
@@ -2171,7 +2186,7 @@ __webpack_require__.r(__webpack_exports__);
 
             _this3.correct = _this3.correct + confirmed;
             extra = extra + _this3.answers[index].length;
-          } else if (_this3.answers[index] === a.correct) _this3.correct++;
+          } else if (_this3.answers[index] === a.correct && !a.gender) _this3.correct++;
         });
 
         _this3.perc = (_this3.correct / (_this3.allMadeQuestions.length - 1 + extra) * 100).toFixed(2);
@@ -20689,13 +20704,9 @@ var render = function() {
           [
             _vm.perc < 25
               ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_good")))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.perc >= 25 && _vm.perc <= 55
+              : _vm.perc >= 25 && _vm.perc <= 55
               ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_med")))])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.perc > 55
+              : _vm.perc > 55
               ? _c("div", [_vm._v(_vm._s(_vm.$t("covid19.result_bad")))])
               : _vm._e(),
             _vm._v(" "),
@@ -35097,10 +35108,14 @@ __webpack_require__.r(__webpack_exports__);
       "q_temperature": "What is the highest temperature you measured?",
       "less_39": "Less than 102.2º F",
       "to_39": "From 102.2º F",
-      "q_old_preg": "Are you pregnant or are you over 65?",
+      "q_gender": "What is your gender?",
+      "g_f": "Female",
+      "g_m": "Male",
+      "q_old": "Are you over 65 years old?",
+      "q_old_preg": "Are you pregnant or over 65 years old?",
       "q_place_50": "Have you recently visited places with more than 50 people?",
       "q_international_trip": "Did you travel internationally recently?",
-      "q_approch _": "Did you have an approximation with someone who is infected?",
+      "q_approch": "Did you have an approximation with someone who is infected?",
       "q_symptoms": "Did you have any of these symptoms?",
       "s_coryza": "Coryza",
       "s_stuffy_nose": "Stuffy nose",
@@ -35288,10 +35303,14 @@ __webpack_require__.r(__webpack_exports__);
       "q_temperature": "¿Cuál es la temperatura más alta que midió?",
       "less_39": "Menos de 39° C",
       "to_39": "Desde 39° C",
+      "q_gender": "¿Cuál es su género?",
+      "g_f": "Femenino",
+      "g_m": "Hombre",
+      "q_old": "¿Tiene más de 65 años?",
       "q_old_preg": "¿Está embarazada o tiene más de 65 años?",
       "q_place_50": "¿Ha visitado recientemente lugares con más de 50 personas?",
       "q_international_trip": "¿Viajó internacionalmente recientemente?",
-      "q_approch _": "¿Tuviste una aproximación con alguien infectado?",
+      "q_approch": "¿Tuviste una aproximación con alguien infectado?",
       "q_symptoms": "¿Tuvo alguno de estos síntomas?",
       "s_coryza": "Coryza",
       "s_stuffy_nose": "Nariz tapada",
@@ -35515,10 +35534,14 @@ __webpack_require__.r(__webpack_exports__);
       "q_temperature": "Quelle est la température la plus élevée que vous avez mesurée?",
       "less_39": "Moins de 39° C",
       "to_39": "De 39° C",
+      "q_gender": "Quel est votre sexe?",
+      "g_f": "Femme",
+      "g_m": "Homme",
+      "q_old": "Avez-vous plus de 65 ans?",
       "q_old_preg": "Êtes-vous enceinte ou avez-vous plus de 65 ans?",
       "q_place_50": "Avez-vous récemment visité des lieux de plus de 50 personnes?",
       "q_international_trip": "Avez-vous voyagé récemment à l'étranger?",
-      "q_approch _": "Avez-vous eu une approximation avec une personne infectée?",
+      "q_approch": "Avez-vous eu une approximation avec une personne infectée?",
       "q_symptoms": "Avez-vous eu l'un de ces symptômes?",
       "s_coryza": "Nez qui coule",
       "s_stuffy_nose": "Nez bouché",
@@ -35736,6 +35759,10 @@ __webpack_require__.r(__webpack_exports__);
       "q_temperature": "Qual a temperatura mais alta que você mediu?",
       "less_39": "Menos de 39°",
       "to_39": "A partir de 39°",
+      "q_gender": "Qual é o seu género?",
+      "g_f": "Feminino",
+      "g_m": "Masculino",
+      "q_old": "Você tem mais de 65 anos?",
       "q_old_preg": "Você está grávida ou tem mais de 65 anos?",
       "q_place_50": "Recentemente frequentou lugares com mais de 50 pessoas?",
       "q_international_trip": "Fez alguma viagem internacional recentemente?",
@@ -35927,6 +35954,10 @@ __webpack_require__.r(__webpack_exports__);
       "q_temperature": "Qual a temperatura mais alta que você mediu?",
       "less_39": "Menos de 39°",
       "to_39": "A partir de 39°",
+      "q_gender": "Qual é o seu género?",
+      "g_f": "Feminino",
+      "g_m": "Masculino",
+      "q_old": "Você tem mais de 65 anos?",
       "q_old_preg": "Você está grávida ou tem mais de 65 anos?",
       "q_place_50": "Recentemente frequentou lugares com mais de 50 pessoas?",
       "q_international_trip": "Fez alguma viagem internacional recentemente?",

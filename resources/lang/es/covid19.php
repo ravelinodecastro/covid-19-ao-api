@@ -50,10 +50,15 @@ return [
     'less_39' => "Menos de 39° C", 
     'to_39' => "Desde 39° C",
 
+    'q_gender'=> "¿Cuál es su género?",
+    'g_f'=> "Femenino",
+    'g_m'=> "Hombre",
+
+    'q_old'=> "¿Tiene más de 65 años?",
     'q_old_preg' => "¿Está embarazada o tiene más de 65 años?",
     'q_place_50' => "¿Ha visitado recientemente lugares con más de 50 personas?",
     'q_international_trip' => "¿Viajó internacionalmente recientemente?",
-    'q_approch _' => "¿Tuviste una aproximación con alguien infectado?",
+    'q_approch' => "¿Tuviste una aproximación con alguien infectado?",
     'q_symptoms' => "¿Tuvo alguno de estos síntomas?",
     
     's_coryza' => "Coryza",

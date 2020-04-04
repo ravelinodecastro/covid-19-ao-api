@@ -8,12 +8,12 @@
         <meta name="description"content="{{__('covid19.seo_description')}}">
         <meta name="keywords" content="{{__('covid19.seo_keywords')}}">
         <link rel="icon" type="image/x-icon" href="/assets/images/icon.webp">
-        <meta property="og:title" content="Covid-19 Ao Api">
+        <meta property="og:title" content="{{env('APP_NAME')}} - @yield('title')">
         <meta property="og:description" content="{{__('covid19.seo_description')}}">
         <meta property="og:url" content="{{url('')}}">
         <meta property="og:image" content="/assets/images/background.jpg">
         <meta property="og:image:secure_url" content="/assets/images/background.jpg">
-        <meta data-hid="twitter:title" name="twitter:title" content="Covid-19 Ao Api">
+        <meta data-hid="twitter:title" name="twitter:title" content="{{env('APP_NAME')}} - @yield('title')">
         <meta data-hid="twitter:description" name="twitter:description" content="{{__('covid19.seo_description')}}">
         <meta data-hid="twitter:image" name="twitter:image"
             content="/assets/images/background.jpg">
@@ -22,9 +22,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="#a12e35">
         <meta property="keywords" content="Notícias">
-        <meta property="og:locale" content="pt_AO">
+        <meta property="og:locale" content="{{ str_replace('-', '_', app()->getLocale()) }}">
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Covid-19 Ao Api">
+        <meta property="og:site_name" content="{{env('APP_NAME')}} - @yield('title')">
         <meta property="article:publisher" content="https://www.facebook.com/mr.elgenio/">
         <meta name="twitter:creator" content="@lil_rav">
         <meta name="twitter:site" content="@lil_rav">
@@ -90,9 +90,11 @@
                 </div>
             </nav>
             @show
-                @yield('content')
+                <div class="unique-main">
+                    @yield('content')
+                </div>
             @section('footer')
-            <footer class="nb-footer">
+            <footer class="unique-footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
@@ -104,8 +106,8 @@
                                     <ul class="list-inline">
                                         <li class="d-inline-block"><a href="http://www.facebook.com/mr.elgenio" title=""><i class="fa fa-facebook"></i></a></li>
                                         <li class="d-inline-block"><a href="http://www.instagram.com/lil_rav" title=""><i class="fa fa-instagram"></i></a></li>
-                                        <li class="d-inline-block"><a href="http://www.linkedin.com/in/ravelinodecastro" title=""><i class="fa fa-github"></i></a></li>
-                                        <li class="d-inline-block"><a href="http://www.github.com/ravelinodecastro" title=""><i class="fa fa-linkedin"></i></a></li>
+                                        <li class="d-inline-block"><a href="http://www.linkedin.com/in/ravelinodecastro" title=""><i class="fa fa-linkedin"></i></a></li>
+                                        <li class="d-inline-block"><a href="http://www.github.com/ravelinodecastro" title=""><i class="fa fa-github"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

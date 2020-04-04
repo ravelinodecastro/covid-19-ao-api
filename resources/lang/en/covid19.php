@@ -47,11 +47,18 @@ return [
     'two_more' => "More than two days",
     'q_temperature' => "What is the highest temperature you measured?",
     'less_39' => "Less than 102.2º F",
-     'to_39' => "From 102.2º F",
-    'q_old_preg' => "Are you pregnant or are you over 65?",
+    'to_39' => "From 102.2º F",
+
+    
+    'q_gender'=> "What is your gender?",
+    'g_f'=> "Female",
+    'g_m'=> "Male",
+
+    'q_old'=> "Are you over 65 years old?",
+    'q_old_preg' => "Are you pregnant or over 65 years old?",
     'q_place_50' => "Have you recently visited places with more than 50 people?",
     'q_international_trip' => "Did you travel internationally recently?",
-    'q_approch _' => "Did you have an approximation with someone who is infected?",
+    'q_approch' => "Did you have an approximation with someone who is infected?",
     'q_symptoms' => "Did you have any of these symptoms?",
     
     's_coryza' => "Coryza",

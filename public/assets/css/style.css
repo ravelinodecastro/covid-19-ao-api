@@ -6,6 +6,9 @@ html, body {
     height: 100vh;
     margin: 0;
 }
+.unique-nav{
+    min-height: 2.5em;
+}
 .bg-unique {
     background-color: #a12e35!important;
 }
@@ -138,23 +141,26 @@ html, body {
 }
 
 
+.unique-main{
+    min-height: calc(100vh - 20em - 2.5em);
+}
 
-
-footer.nb-footer {
+footer.unique-footer {
+    min-height: 20em;
     background: #222;
     border-top: 4px solid #a12e35; }
-    footer.nb-footer .about {
+    footer.unique-footer .about {
     margin: 0 auto;
     margin-top: 40px;
     max-width: 1170px;
     text-align: center; }
-    footer.nb-footer .about p {
+    footer.unique-footer .about p {
     font-size: 13px;
     color: #999;
     margin-top: 30px; }
-    footer.nb-footer .about .social-media {
+    footer.unique-footer .about .social-media {
     margin-top: 15px; }
-    footer.nb-footer .about .social-media ul li a {
+    footer.unique-footer .about .social-media ul li a {
     display: inline-block;
     width: 45px;
     height: 45px;
@@ -163,23 +169,23 @@ footer.nb-footer {
     font-size: 16px;
     color: #a12e35;
     border: 1px solid rgba(255, 255, 255, 0.3); }
-    footer.nb-footer .about .social-media ul li a:hover {
+    footer.unique-footer .about .social-media ul li a:hover {
     background: #a12e35;
     color: #fff;
     border-color: #a12e35; }
-    footer.nb-footer .footer-info-single {
+    footer.unique-footer .footer-info-single {
     margin-top: 30px; }
-    footer.nb-footer .footer-info-single .title {
+    footer.unique-footer .footer-info-single .title {
     color: #aaa;
     text-transform: uppercase;
     font-size: 16px;
     border-left: 4px solid #a12e35;
     padding-left: 5px; }
-    footer.nb-footer .footer-info-single ul li a {
+    footer.unique-footer .footer-info-single ul li a {
     display: block;
     color: #aaa;
     padding: 2px 0; }
-    footer.nb-footer .footer-info-single ul li a:hover {
+    footer.unique-footer .footer-info-single ul li a:hover {
     text-decoration: inherit;
     color: #a12e35; }
     p a {
@@ -189,7 +195,7 @@ footer.nb-footer {
         color: #bb7378;
         text-decoration: inherit;
         }
-    footer.nb-footer .footer-info-single p {
+    footer.unique-footer .footer-info-single p {
     font-size: 13px;
     line-height: 20px;
     color: #aaa; }

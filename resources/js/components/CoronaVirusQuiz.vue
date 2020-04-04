@@ -66,8 +66,8 @@
 
     <div class="text-center p-4" v-if="resultsStage" ref="formContainer" style="min-height: 16em;">
       <div v-if="perc<25">{{ $t('covid19.result_good')}}</div>
-      <div v-if="perc>=25 &&perc <=55">{{ $t('covid19.result_med')}}</div>
-      <div v-if="perc>55">{{ $t('covid19.result_bad')}}</div>
+      <div v-else-if="perc>=25 && perc <=55">{{ $t('covid19.result_med')}}</div>
+      <div v-else-if="perc>55">{{ $t('covid19.result_bad')}}</div>
       <div class="m-4">
         <a href="tel:111" class="btn btn-unique mb-2" v-if="perc>=25">{{ $t('covid19.call111')}}</a>
         <a href="/tips" class="btn btn-unique mb-2">{{ $t('covid19.tips')}}</a>
@@ -125,7 +125,14 @@ export default {
           ]
         },
         {
-          text: this.$t("covid19.q_old_preg"),
+          text: this.$t("covid19.q_gender"),
+          gender: true,
+          type: "tf",
+          strinOptions: [this.$t("covid19.g_m"), this.$t("covid19.g_f")],
+          correct: "t"
+        },
+        {
+          text: this.$t("covid19.q_old"),
           type: "tf",
           strinOptions: [this.$t("covid19.yes"), this.$t("covid19.no")],
           correct: "t"
@@ -188,6 +195,7 @@ export default {
       allMadeQuestions: [],
       answers: [],
       answerMulti: [],
+      gender: "f",
       answer: null,
       correct: 0,
       perc: null
@@ -199,6 +207,7 @@ export default {
       this.resultsStage = false;
       this.allMadeQuestions = [];
       this.answerMulti = [];
+      this.gender = "f";
       this.answers = [];
       this.answer = null;
       this.correct = 0;
@@ -229,7 +238,8 @@ export default {
       setTimeout(() => {
         let q = this.questions[this.currentCount];
         let qa = {
-          inSub: this.currentQuestion,
+          gender: this.currentQuestion.gender,
+          inSub: this.currentQuestion.inSub,
           question: this.currentQuestion.text,
           correct: this.currentQuestion.correct,
           answer: this.answerMulti.length > 0 ? this.answerMulti : this.answer,
@@ -251,6 +261,13 @@ export default {
           controller = false;
         }
 
+        if (this.currentQuestion.gender) {
+          this.gender = this.answer;
+          this.questions[2].text =
+            this.gender == "f"
+              ? this.$t("covid19.q_old_preg")
+              : this.$t("covid19.q_old");
+        }
         if (
           (q.sub && q.toNextMustBeCorrect && qa.answer == qa.correct) ||
           (qa.inSub &&
@@ -262,6 +279,7 @@ export default {
               !this.allMadeQuestions.some(el => el.question == element.text)
             ) {
               this.currentQuestion = {
+                gender: element.gender,
                 inSub: true,
                 text: element.text,
                 type: element.type,
@@ -299,7 +317,8 @@ export default {
             this.correct = this.correct + confirmed;
 
             extra = extra + this.answers[index].length;
-          } else if (this.answers[index] === a.correct) this.correct++;
+          } else if (this.answers[index] === a.correct && !a.gender)
+            this.correct++;
         });
 
         this.perc = (

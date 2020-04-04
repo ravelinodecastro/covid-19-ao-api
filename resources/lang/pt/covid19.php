@@ -53,7 +53,13 @@ return [
     
     'less_39'=>"Menos de 39°",  
     'to_39'=>"A partir de 39°",
-            
+    
+    'q_gender'=> "Qual é o seu género?",
+    'g_f'=> "Feminino",
+    'g_m'=> "Masculino",
+
+    'q_old'=> "Você tem mais de 65 anos?",
+    
     'q_old_preg'=> "Você está grávida ou tem mais de 65 anos?",
     
     'q_place_50'=> "Recentemente frequentou lugares com mais de 50 pessoas?",

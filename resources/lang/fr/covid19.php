@@ -49,11 +49,18 @@ return [
     "q_temperature" => "Quelle est la température la plus élevée que vous avez mesurée?",
     "less_39" => "Moins de 39° C",
      "to_39" => "De 39° C",
+
+     
+    'q_gender'=> "Quel est votre sexe?",
+    'g_f'=> "Femme",
+    'g_m'=> "Homme",
+
+    'q_old'=> "Avez-vous plus de 65 ans?",
     "q_old_preg" => "Êtes-vous enceinte ou avez-vous plus de 65 ans?",
     
     "q_place_50" => "Avez-vous récemment visité des lieux de plus de 50 personnes?",
     "q_international_trip" => "Avez-vous voyagé récemment à l'étranger?",
-    "q_approch _" => "Avez-vous eu une approximation avec une personne infectée?",
+    "q_approch" => "Avez-vous eu une approximation avec une personne infectée?",
     "q_symptoms" => "Avez-vous eu l'un de ces symptômes?",
     
     "s_coryza" => "Nez qui coule",
