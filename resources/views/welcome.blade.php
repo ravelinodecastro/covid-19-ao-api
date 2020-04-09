@@ -5,6 +5,7 @@
     <corona-virus-quiz></corona-virus-quiz>
     <div class="container mb-3">
         <div class="row">
+     
             <div class="col-md-3">
                 <div class="card border-danger m-3 m-md-1 p-3">
                     <div class="card border-danger shadow text-danger p-3 my-card" ><span class="fa fa-plus-square" aria-hidden="true"></span></div>
@@ -33,7 +34,11 @@
                     <div class="text-dark text-center mt-2"><h1> {{$data->deaths}}</h1></div>
                 </div>
             </div>
-            <div class="p-4">{{__('covid19.lastupdate')}}: {{$date}}</div>
+            <div>
+                <div class="px-4 py-1"><b class="font-weight-bold">{{__('covid19.total')}}</b>: {{$data->confirmed + $data->suspects +$data->recovered +$data->deaths}}</div>
+                <div class="px-4 py-1">{{__('covid19.lastupdate')}}: {{$date}}</div>
+            </div>
+           
         </div>
     </div>
 @endsection('content')

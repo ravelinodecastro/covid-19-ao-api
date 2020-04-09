@@ -2,18 +2,19 @@
 
 return [
 
-    'seo_description' => 'Covid19AoApi é uma API angolana criada para mostrar em tempo real as informações sobre os casos do corona vírus detetados no território angolano.',
-    'seo_keywords' => 'Angola, Corona vírus, Covid-19, Api, Programadores, Desenvolvimento',
+    'seo_description' => 'Covid-19 Ao é uma Plataforma e API angolana criada para mostrar em tempo real as informações sobre os casos do corona vírus detetados no território angolano, bem como permitir os utilizadores fazerem um autodiagnóstico (teste online) por meio de perguntas e respostas',
+    'seo_keywords' => 'Angola, Corona vírus, Covid-19, Api, Programadores, Desenvolvimento, autodiagnóstico, teste online, estudante angolano',
     'langs'=>'Idiomas',
     'homepage'=>'Página inicial',
     'login'=>'Login',
     'register'=>'Cadastrar-se',
+    'total' => 'Total de casos',
     'confirmed'=>'Casos confirmados',
     'suspects'=>'Casos suspeitos',
     'recovered'=>'Recuperados',
     'deaths'=>'Óbitos',
     'lastupdate'=>'Última actualização',
-    'footer_about'=>'Covid-19AoApi foi criado com o intuito de informar o povo angolano, de forma ajudar no combate a pandemia. Por favor diga não a fake news (falsas notícias), fique em casa, cuide de si e sua família.',
+    'footer_about'=>'Covid-19 Ao foi criado com o intuito de informar o povo angolano, de forma ajudar no combate a pandemia. Por favor diga não a fake news (falsas notícias), fique em casa, cuide de si e sua família.',
 
     'usefullinks'=>'Links úteis',
     'callsos'=>'Ligar para emergência',
@@ -24,7 +25,7 @@ return [
     'about'=>'Sobre',
     'about_description'=>'Este projecto foi desenvolvido por <a href="https://github.com/ravelinodecastro/">Ravelino de Castro</a>, um programador fullstack, estudante de ciências da computação',
     'contribution'=>'Contribuição',
-    'contribution_description'=>'Se és desenvolvedor, podes contribuir no projecto, pois ele é open source. Caso não sejas e ainda quiseres contribuir no projecto, podes ajudar no pagamento de um domínio (ex: covid-19-ao.com)',
+    'contribution_description'=>'Se és desenvolvedor, podes contribuir no projecto, pois ele é open source. Caso não sejas e ainda quiseres contribuir no projecto, fique em casa e cumpra a quarentena.',
 
     'test_header'=>'Teste online do Covid-19',
     'test_p'=>'Este é um questionário que lhe permite facilmente ter um diagnóstico da doença Covid-19, causado pelo novo Corona vírus.',

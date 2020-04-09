@@ -29,7 +29,8 @@
                 //$crawler = $this->client->request('GET', $url);
     
                 $data = [];
-                $crawler->filter('section.lastsection')->each(function ($node) use (&$data, $url) {
+                $controller = false;
+                $crawler->filter('section.lastsection')->each(function ($node) use (&$data, $url, &$controller) {
                     if(($node->filter('span.f-size2')->count() > 0) && $node->filter('span.big-number')->count() > 0) {
                         for ($i=0; $i < $node->filter('span.f-size2')->count(); $i++) { 
                             
@@ -47,8 +48,10 @@
                                 $data['deaths'][] = $node->filter('span.big-number')->eq($i)->text();
                             }
                         }
+                        $controller = true;
                     }
                 });
+                if($controller)
                 $this->save($data);
 
                 $this->results = $data;

@@ -1,18 +1,19 @@
 <?php
 
 return [
-    "seo_description" => "Covid19AoApi est une API angolaise créée pour afficher en temps réel les informations sur les cas de virus corona détectés sur le territoire angolais.",
+    "seo_description" => "Covid-19 Ao est une plate-forme et une API angolaises créées pour afficher en temps réel des informations sur les cas de virus corona détectés sur le territoire angolais, ainsi que pour permettre aux utilisateurs de faire un auto-diagnostic (test en ligne) à travers des questions et réponses",
     "seo_keywords" => "Angola, virus Corona, Covid-19, API, programmeurs, développement",
     "langs" => "Langues",
     "homepage" => "Page d'accueil",
     "login" => "Login",
     "register" => "Register",
+    'total' => 'Nombre total de cas',
     "confirmed" => "Cas confirmés",
     "suspects" => "Cas suspects",
     "recovered" => "récupéré",
     "deaths" => "Décès",
     "lastupdate" => "Dernière mise à jour",
-    "footer_about" => "Covid-19AoApi a été créé dans le but d'informer le peuple angolais, afin d'aider à lutter contre la pandémie. Veuillez dire non aux fausses nouvelles, rester à la maison, prendre soin de vous et de votre famille . ",
+    "footer_about" => "Covid-19 Ao a été créé dans le but d'informer le peuple angolais, afin d'aider à lutter contre la pandémie. Veuillez dire non aux fausses nouvelles, rester à la maison, prendre soin de vous et de votre famille . ",
     
     "usefullinks" => "Liens utiles",
     "callsos" => "Appel d'urgence",
@@ -23,7 +24,7 @@ return [
     "about" => "À propos",
     "about_description" => "Ce projet a été développé par <a href='https://github.com/ravelinodecastro/'> Ravelino de Castro </a>, programmeur fullstack, étudiant en informatique",
     "contribution" => "contribution",
-    "contribution_description" => "Si vous êtes développeur, vous pouvez contribuer au projet, car il est open source. Si vous n'êtes pas et souhaitez toujours contribuer au projet, vous pouvez aider au paiement d'un domaine (ex: covid-19-ao.com)" ,
+    "contribution_description" => "Si vous êtes développeur, vous pouvez contribuer au projet, car il est open source. Si vous n'êtes pas et souhaitez toujours contribuer au projet, restez à la maison et respectez la quarantaine." ,
     
     "test_header" => "Test en ligne Covid-19",
     "test_p" => "Il s'agit d'un questionnaire qui vous permet de diagnostiquer facilement la maladie de Covid-19, causée par le nouveau virus Corona.",

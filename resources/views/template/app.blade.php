@@ -42,7 +42,7 @@
         <div  id="app" class="container-fuild">
             @section('nav')
             <nav class="mb-4 navbar navbar-expand-lg navbar-dark bg-unique">
-                <a class="navbar-brand"  href="{{ url('/') }}">Covid19AoApi</a>
+                <a class="navbar-brand"  href="{{ url('/') }}">{{env('APP_NAME')}}</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-3" aria-controls="navbarSupportedContent-3" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

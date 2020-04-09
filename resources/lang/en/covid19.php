@@ -1,18 +1,19 @@
 <?php
 
 return [
-    'seo_description' => 'Covid19AoApi is an Angolan API created to show in real time information on cases of the corona virus detected in the Angolan territory.',
+    'seo_description' => 'Covid-19 Ao is an Angolan Platform and API created to show in real time information on cases of the corona virus detected in the Angolan territory, as well as allowing users to self-diagnose (online test) through questions and answers',
     'seo_keywords' => 'Angola, Corona virus, Covid-19, Api, Programmers, Development',
     'langs' => 'Languages',
     'homepage' => 'Home page',
     'login' => 'Login',
     'register' => 'Register',
+    'total' => 'Total cases',
     'confirmed' => 'Confirmed cases',
     'suspects' => 'Suspicious cases',
-    'recovered' => 'recovered',
+    'recovered' => 'Recovered',
     'deaths' => 'Deaths',
     'lastupdate' => 'Last updated',
-    'footer_about' => 'Covid-19AoApi was created with the aim of informing the Angolan people, in order to help fight the pandemic. Please say no to fake news, stay home, take care of yourself and your family. ',
+    'footer_about' => 'Covid-19 Ao was created with the aim of informing the Angolan people, in order to help fight the pandemic. Please say no to fake news, stay home, take care of yourself and your family. ',
     
     'usefullinks' => 'Useful links',
     'callsos' => 'Call emergency',
@@ -23,7 +24,7 @@ return [
     'about' => 'About',
     'about_description' => 'This project was developed by <a href="https://github.com/ravelinodecastro/"> Ravelino de Castro </a>, a fullstack programmer, student of computer science',
     'contribution' => 'contribution',
-    'contribution_description' => 'If you are a developer, you can contribute to the project, as it is open source. If you are not and still want to contribute to the project, you can help with the payment of a domain (ex: covid-19-ao.com) ',
+    'contribution_description' => 'If you are a developer, you can contribute to the project, as it is open source. If you are not and still want to contribute to the project, stay at home and comply with the quarantine.',
     
     'test_header' => 'Covid-19 online test',
     'test_p' => 'This is a questionnaire that allows you to easily have a diagnosis of Covid-19 disease, caused by the new Corona virus.',
