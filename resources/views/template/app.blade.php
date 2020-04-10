@@ -29,6 +29,7 @@
         <meta name="twitter:creator" content="@lil_rav">
         <meta name="twitter:site" content="@lil_rav">
         <meta name="twitter:card" content="summary_large_image">
+        <meta name="api-base-url" content="{{env('API_BASE_URL')}}">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
