@@ -69,9 +69,11 @@
       <div v-if="perc<32">{{ $t('covid19.result_good')}}</div>
       <div v-else-if="perc>=32 && perc <=50">{{ $t('covid19.result_med')}}</div>
       <div v-else-if="perc>50">{{ $t('covid19.result_bad')}}</div>
+      <small v-if="perc<32" class="font-italic">{{ $t('covid19.services_description_2')}}</small>
       <div class="m-4">
         <a href="tel:111" class="btn btn-unique mb-2" v-if="perc>=32">{{ $t('covid19.call111')}}</a>
         <a href="/tips" class="btn btn-unique mb-2">{{ $t('covid19.tips')}}</a>
+        <a href="/services" v-if="perc<32" class="btn btn-unique mb-2">{{ $t('covid19.services')}}</a>
         <button class="btn btn-unique mb-2" @click.prevent="startQuiz">{{ $t('covid19.new_test')}}</button>
       </div>
     </div>

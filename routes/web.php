@@ -19,6 +19,7 @@ Route::get('locale/{locale}', function ($locale){
 });
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
-Route::get('/tips', 'TipsController@index')->name('tips');
+Route::get('/tips', 'TipController@index')->name('tips');
+Route::get('/services', 'ServiceController@index')->name('services');
 
 Route::get('/sitemap.xml', 'SitemapController@index');

@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
     use App\Models\Tip;
 
-    class TipsController extends Controller
+    class TipController extends Controller
     {
   
         public function get(Request $request){

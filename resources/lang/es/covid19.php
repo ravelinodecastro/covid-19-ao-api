@@ -6,6 +6,9 @@ return [
     'seo_keywords' => 'Angola, virus Corona, Covid-19, Api, Programadores, Desarrollo',
     'langs' => 'Idiomas',
     'homepage' => 'Página de inicio',
+    'services' => 'Lista de servicios',
+    'services_description' => 'Encuentre aquí los diversos servicios que puede disfrutar sin salir de su hogar, proporcionando así una mejor cuarentena para usted y su familia.',
+    'services_description_2'=>'Haga clic en el botón "Lista de servicios" y descubra qué servicios puede solicitar sin salir de su hogar.',
     'login' => 'Iniciar sesión',
     'register' => 'Registrarse',
     'total' => 'Total de casos',
@@ -15,6 +18,13 @@ return [
     'death' => 'Muertes',
     'lastupdate' => 'Última actualización',
     'footer_about' => 'Covid-19 Ao fue creado con el objetivo de informar al pueblo angoleño, para ayudar a combatir la pandemia. Di no a las noticias falsas, quédate en casa, cuídate a ti mismo y a tu familia.',
+    'more' => 'Más',
+    
+    'no_more_cat' => 'No hay servicios en esta categoría',
+    'no_more_serv' => 'No hay más servicios para mostrar',
+    'failed' => 'Error al cargar',
+    'tryagain' => 'Inténtalo de nuevo',
+
     'usefullinks' => 'Enlaces útiles',
     'callsos' => 'Llamar a emergencia',
     'who' => 'Organización Mundial de la Salud',

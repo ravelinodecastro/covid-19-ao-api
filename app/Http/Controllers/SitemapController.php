@@ -10,12 +10,12 @@ class SitemapController extends Controller
 {
     public function index()
     {
-      $generals = General::all()->first();
-      $tips = Tip::all()->first();
+      //$generals = General::all()->first();
+     // $tips = Tip::all()->first();
    
       return response()->view('sitemap.index', [
-          'generals' => $generals,
-          'tips' => $tips,
+         // 'generals' => $generals,
+        //  'tips' => $tips,
       ])->header('Content-Type', 'text/xml');
     }
 }

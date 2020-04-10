@@ -20,4 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/general', 'Api\GeneralController@general');
 Route::get('/report', 'Api\GeneralController@report');
-Route::get('/tips', 'Api\TipsController@get');
+Route::get('/tips', 'Api\TipController@get');
+Route::get('/categories', 'Api\CategoryController@get');
+Route::get('/services', 'Api\ServiceController@get');
+Route::get('/services/{id}', 'Api\ServiceController@getByCat');

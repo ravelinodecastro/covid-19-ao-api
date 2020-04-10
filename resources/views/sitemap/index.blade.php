@@ -4,4 +4,7 @@
     <sitemap>
         <loc>{{env('APP_URL')}}/sitemap.xml/tips</loc>
     </sitemap>
+    <sitemap>
+        <loc>{{env('APP_URL')}}/sitemap.xml/services</loc>
+    </sitemap>
 </sitemapindex>

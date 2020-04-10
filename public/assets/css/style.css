@@ -148,19 +148,23 @@ html, body {
 footer.unique-footer {
     min-height: 20em;
     background: #222;
-    border-top: 4px solid #a12e35; }
-    footer.unique-footer .about {
+    border-top: 4px solid #a12e35; 
+}
+footer.unique-footer .about {
     margin: 0 auto;
     margin-top: 40px;
     max-width: 1170px;
-    text-align: center; }
-    footer.unique-footer .about p {
+    text-align: center;
+}
+footer.unique-footer .about p {
     font-size: 13px;
     color: #999;
-    margin-top: 30px; }
-    footer.unique-footer .about .social-media {
-    margin-top: 15px; }
-    footer.unique-footer .about .social-media ul li a {
+    margin-top: 30px;
+}
+footer.unique-footer .about .social-media {
+    margin-top: 15px;
+}
+footer.unique-footer .about .social-media ul li a {
     display: inline-block;
     width: 45px;
     height: 45px;
@@ -168,35 +172,156 @@ footer.unique-footer {
     border-radius: 50%;
     font-size: 16px;
     color: #a12e35;
-    border: 1px solid rgba(255, 255, 255, 0.3); }
-    footer.unique-footer .about .social-media ul li a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+footer.unique-footer .about .social-media ul li a:hover {
     background: #a12e35;
     color: #fff;
     border-color: #a12e35; }
     footer.unique-footer .footer-info-single {
-    margin-top: 30px; }
-    footer.unique-footer .footer-info-single .title {
+    margin-top: 30px;
+}
+footer.unique-footer .footer-info-single .title {
     color: #aaa;
     text-transform: uppercase;
     font-size: 16px;
     border-left: 4px solid #a12e35;
-    padding-left: 5px; }
-    footer.unique-footer .footer-info-single ul li a {
+    padding-left: 5px;
+}
+footer.unique-footer .footer-info-single ul li a {
     display: block;
     color: #aaa;
-    padding: 2px 0; }
-    footer.unique-footer .footer-info-single ul li a:hover {
+    padding: 2px 0;
+}
+footer.unique-footer .footer-info-single ul li a:hover {
     text-decoration: inherit;
-    color: #a12e35; }
-    p a {
     color: #a12e35;
-    }
-    p a:hover {
-        color: #bb7378;
-        text-decoration: inherit;
-        }
-    footer.unique-footer .footer-info-single p {
+}
+p a {
+    color: #a12e35;
+}
+p a:hover {
+    color: #bb7378;
+    text-decoration: inherit;
+}
+footer.unique-footer .footer-info-single p {
     font-size: 13px;
     line-height: 20px;
-    color: #aaa; }
+    color: #aaa;
+}
   
+
+
+/*Services*/
+.category .nav-tabs .nav-link.active {
+    color: #a12e35;
+    font-weight: bold;
+    border: 0px solid transparent;
+}
+.category .nav-tabs .nav-link {
+    color: #000;
+    border: 0px solid transparent;
+}
+.category .nav-tabs .nav-link:hover {
+    color: #a12e35;
+    font-weight: 1000;
+    border: 0px solid transparent;
+}
+.category .nav-tabs {
+    border: 0px solid transparent;
+}
+.ads {
+    margin: 30px 0 30px 0;
+    
+}
+
+.ads .card-notify-badge {
+    position: absolute;
+    left: -10px;
+    top: -20px;
+    background: #a12e35;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px; 
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 14px;
+
+}
+
+
+
+.ads .card-detail-badge {      
+    background: #a12e35;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 10px;        
+}
+.ads .description {   
+    overflow: hidden;   
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    max-height: 5em;
+    font-size: 14px;
+    -webkit-box-orient: vertical;   
+}
+
+    
+
+.ads .card:hover {
+    background: #fff;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.ads .card-image-overlay {
+    font-size: 20px;
+    
+}
+
+
+.ads .card-image-overlay span {
+    display: inline-block;              
+}
+
+.ads .img-ad{
+    height: 16em;
+    width: 100%;
+    object-fit: cover;
+}
+
+.ads .ad-btn {
+    text-transform: uppercase;
+    width: 80px;
+    height: 40px;
+    border-radius: 80px;
+    font-size: 10px;
+    line-height: 35px;
+    text-align: center;
+    border: 3px solid #a12e35;
+    display: block;
+    text-decoration: none;
+    margin: 20px auto 1px auto;
+    color: #fff;
+    overflow: hidden;        
+    position: relative;
+    background-color: #a12e35;
+}
+
+.ads .ad-btn:hover {
+    background-color: #a12e35;
+    color: #a12e35;
+    border: 2px solid #a12e35;
+    background: transparent;
+    transition: all 0.3s ease;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+}
+        
+
+.ads .ad-title h5 {
+    text-transform: uppercase;
+    font-size: 18px;
+}

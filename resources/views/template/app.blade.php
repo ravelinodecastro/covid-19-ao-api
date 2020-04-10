@@ -55,6 +55,9 @@
                         <li class="nav-item">
                             <a class="{{ Request::is('tips') ? 'active ' : '' }} nav-link"  href="{{ url('/tips') }}">{{__('covid19.tips')}}</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="{{ Request::is('services') ? 'active ' : '' }} nav-link"  href="{{ url('/services') }}">{{__('covid19.services')}}</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{__('covid19.langs')}} 
                                 </a>
@@ -129,8 +132,9 @@
                                 <h2 class="title">{{__('covid19.menu')}}</h2>
                                 <ul class="list-unstyled">
                                     <li><a class="{{ Request::is('/tips') ? 'active ' : '' }}nav-link"  href="{{ url('/tips') }}">{{__('covid19.tips')}}</a></li>
-                                    <li><a href="https://github.com/ravelinodecastro/covid-19-ao-api" title="API">{{__('covid19.api')}}</a></li>
-                                    <li><a  class="{{ Request::is('tips') ? 'active ' : '' }}nav-link" href="{{ url('/') }}" title="Teste">{{__('covid19.test')}}</a></li>
+                                    <li><a href="https://github.com/ravelinodecastro/covid-19-ao-api" title="{{__('covid19.api')}}">{{__('covid19.api')}}</a></li>
+                                    <li><a  class="{{ Request::is('tips') ? 'active ' : '' }}nav-link" href="{{ url('/') }}" title="{{__('covid19.test')}}">{{__('covid19.test')}}</a></li>
+                                    <li><a  class="{{ Request::is('services') ? 'active ' : '' }}nav-link" href="{{ url('/services') }}" title="{{__('covid19.services')}}">{{__('covid19.services')}}</a></li>
 
                                 </ul>
                             </div>

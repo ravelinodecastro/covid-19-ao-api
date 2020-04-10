@@ -6,6 +6,9 @@ import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
 Vue.use(Loading);
 
+import InfiniteLoading from 'vue-infinite-loading';
+Vue.use(InfiniteLoading, { /* options */ });
+
 import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
 import Locales from './vue-i18n-locales.generated.js';
@@ -23,6 +26,7 @@ Vue.i18n.set(document.documentElement.lang.substr(0, 2));
 
 
 Vue.component('corona-virus-quiz', require('./components/CoronaVirusQuiz.vue').default);
+Vue.component('services', require('./components/Services.vue').default);
 const app = new Vue({
     el: '#app',
     store,

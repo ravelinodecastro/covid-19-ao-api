@@ -5,6 +5,9 @@ return [
     'seo_keywords' => 'Angola, Corona virus, Covid-19, Api, Programmers, Development',
     'langs' => 'Languages',
     'homepage' => 'Home page',
+    'services' => 'List of services',
+    'services_description' => 'Find here the various services that you can enjoy without leaving your home, thus providing a better quarantine for you and your family.',
+    'services_description_2'=>'Click on the "List of services" button and find out which services you can order without leaving your home.',
     'login' => 'Login',
     'register' => 'Register',
     'total' => 'Total cases',
@@ -14,7 +17,14 @@ return [
     'deaths' => 'Deaths',
     'lastupdate' => 'Last updated',
     'footer_about' => 'Covid-19 Ao was created with the aim of informing the Angolan people, in order to help fight the pandemic. Please say no to fake news, stay home, take care of yourself and your family. ',
-    
+    'more' => 'More',
+    'all' => 'All',
+
+    'no_more_cat' => 'There are no services in this category',
+    'no_more_serv' => 'There are no more services to display',
+    'failed' => 'Failed to load',
+    'tryagain' => 'Try again',
+
     'usefullinks' => 'Useful links',
     'callsos' => 'Call emergency',
     'who' => 'World Health Organization',
