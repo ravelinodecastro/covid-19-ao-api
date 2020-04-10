@@ -20,6 +20,7 @@ return [
     'lastupdate' => 'Última actualización',
     'footer_about' => 'Covid-19 Ao fue creado con el objetivo de informar al pueblo angoleño, para ayudar a combatir la pandemia. Di no a las noticias falsas, quédate en casa, cuídate a ti mismo y a tu familia.',
     'more' => 'Más',
+    'all'=>'Todos los servicios',
     
     'no_more_cat' => 'No hay servicios en esta categoría',
     'no_more_serv' => 'No hay más servicios para mostrar',

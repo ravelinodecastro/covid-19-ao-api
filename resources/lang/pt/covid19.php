@@ -20,7 +20,7 @@ return [
     'lastupdate'=>'Última actualização',
     'footer_about'=>'Covid-19 Ao foi criado com o intuito de informar o povo angolano, de forma ajudar no combate a pandemia. Por favor diga não a fake news (falsas notícias), fique em casa, cuide de si e sua família.',
     'more' => 'Mais',
-    'all' => 'Todas',
+    'all' => 'Todos serviços',
 
     'no_more_cat' => 'Não há serviços nessa categoria',
     'no_more_serv' => 'Não há mais serviços para exibir',

@@ -19,7 +19,7 @@ return [
     'lastupdate' => 'Last updated',
     'footer_about' => 'Covid-19 Ao was created with the aim of informing the Angolan people, in order to help fight the pandemic. Please say no to fake news, stay home, take care of yourself and your family. ',
     'more' => 'More',
-    'all' => 'All',
+    'all' => 'All services',
 
     'no_more_cat' => 'There are no services in this category',
     'no_more_serv' => 'There are no more services to display',

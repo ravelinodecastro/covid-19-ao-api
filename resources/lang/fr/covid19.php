@@ -19,7 +19,7 @@ return [
     "lastupdate" => "Dernière mise à jour",
     "footer_about" => "Covid-19 Ao a été créé dans le but d'informer le peuple angolais, afin d'aider à lutter contre la pandémie. Veuillez dire non aux fausses nouvelles, rester à la maison, prendre soin de vous et de votre famille . ",
     'more' => 'Plus',
-    'all' => 'Tous',
+    'all' => 'Tous les services',
 
     'no_more_cat' => "Il n'y a aucun service dans cette catégorie",
     'no_more_serv' => "Il n'y a plus de services à afficher",
