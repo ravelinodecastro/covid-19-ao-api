@@ -60,7 +60,7 @@
                             <a class="{{ Request::is('services') ? 'active ' : '' }} nav-link"  href="{{ url('/services') }}">{{__('covid19.services')}}</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{__('covid19.langs')}} 
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{__('covid19.lang')}} 
                                 </a>
                             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item" href="{{ url('locale/pt') }}">Português</a>

@@ -4,6 +4,7 @@ return [
     'seo_description' => 'Covid-19 Ao is an Angolan Platform and API created to show in real time information on cases of the corona virus detected in the Angolan territory, as well as allowing users to self-diagnose (online test) through questions and answers',
     'seo_keywords' => 'Angola, Corona virus, Covid-19, Api, Programmers, Development',
     'langs' => 'Languages',
+    'lang' => 'English',
     'homepage' => 'Home page',
     'services' => 'List of services',
     'services_description' => 'Find here the various services that you can enjoy without leaving your home, thus providing a better quarantine for you and your family.',

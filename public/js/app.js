@@ -2034,8 +2034,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         container: this.$refs.formContainer,
         canCancel: false
       });*/
-      axios.get("/api/services/" + (this.category_id ? this.category_id : "") + "?lang=" + document.documentElement.lang.substr(0, 2), {
+      axios.get("/api/services" + (this.category_id ? "/" + this.category_id : ""), {
         params: {
+          lang: document.documentElement.lang.substr(0, 2),
           page: this.page
         }
       }).then(function (_ref) {
@@ -2178,11 +2179,13 @@ __webpack_require__.r(__webpack_exports__);
         sub: true,
         toNextMustBeCorrect: true,
         subQuestion: [{
+          position: 1,
           text: this.$t("covid19.q_time_fever"),
           type: "tf",
           strinOptions: [this.$t("covid19.two_less"), this.$t("covid19.two_more")],
           correct: "f"
         }, {
+          position: 2,
           text: this.$t("covid19.q_temperature"),
           type: "tf",
           strinOptions: [this.$t("covid19.less_39"), this.$t("covid19.to_39")],
@@ -2218,12 +2221,16 @@ __webpack_require__.r(__webpack_exports__);
         text: this.$t("covid19.q_symptoms"),
         answers: [this.$t("covid19.s_coryza"), this.$t("covid19.s_stuffy_nose"), this.$t("covid19.s_tiredness"), this.$t("covid19.s_cough"), this.$t("covid19.s_shortness_of_breath"), this.$t("covid19.s_headache"), this.$t("covid19.s_body_aches"), this.$t("covid19.s_sore_throat"), this.$t("covid19.s_diarrhea"), this.$t("covid19.s_loss_of_smell"), this.$t("covid19.s_loss_of_taste")],
         correct: [this.$t("covid19.s_coryza"), this.$t("covid19.s_tiredness"), this.$t("covid19.s_stuffy_nose"), this.$t("covid19.s_cough"), this.$t("covid19.s_body_aches"), this.$t("covid19.s_sore_throat"), this.$t("covid19.s_diarrhea"), this.$t("covid19.s_shortness_of_breath"), this.$t("covid19.s_loss_of_smell"), this.$t("covid19.s_loss_of_taste")],
-        type: "mcmr"
-      }, {
-        text: this.$t("covid19.q_took_medicines"),
-        type: "tf",
-        strinOptions: [this.$t("covid19.yes"), this.$t("covid19.no")],
-        correct: "t"
+        type: "mcmr",
+        sub: true,
+        toNextMustBeCorrect: true,
+        subQuestion: [{
+          position: 1,
+          text: this.$t("covid19.q_took_medicines"),
+          type: "tf",
+          strinOptions: [this.$t("covid19.yes"), this.$t("covid19.no")],
+          correct: "t"
+        }]
       }],
       currentQuestion: null,
       currentCount: 0,
@@ -2277,7 +2284,9 @@ __webpack_require__.r(__webpack_exports__);
       setTimeout(function () {
         var q = _this2.questions[_this2.currentCount];
         var qa = {
+          position: _this2.currentQuestion.position,
           gender: _this2.currentQuestion.gender,
+          sub: _this2.currentQuestion.sub,
           inSub: _this2.currentQuestion.inSub,
           question: _this2.currentQuestion.text,
           correct: _this2.currentQuestion.correct,
@@ -2290,38 +2299,46 @@ __webpack_require__.r(__webpack_exports__);
           correct: qa.correct,
           type: qa.type
         };
-        var controller = true;
-
-        if (_this2.currentCount + 1 === _this2.questions.length) {
-          _this2.handleResults();
-
-          controller = false;
-        }
 
         if (_this2.currentQuestion.gender) {
           _this2.gender = _this2.answer;
           _this2.questions[2].text = _this2.gender == "f" ? _this2.$t("covid19.q_old_preg") : _this2.$t("covid19.q_old");
         }
 
-        if (q.sub && q.toNextMustBeCorrect && qa.answer == qa.correct || qa.inSub && qa.question == (q.subQuestion ? q.subQuestion.slice(-1)[0].text : "not_sub")) {
-          q.subQuestion.forEach(function (element) {
+        var controller = true; //(q.subQuestion ? q.subQuestion.slice(-1)[0].text : "not_sub") just to save the code
+
+        if (_this2.currentCount + 1 === _this2.questions.length && !q.sub || _this2.currentCount + 1 === _this2.questions.length && q.sub && (!Array.isArray(qa.answer) || qa.position == q.subQuestion.length)) {
+          _this2.handleResults();
+
+          controller = false;
+        } else if (q.sub && q.toNextMustBeCorrect && Array.isArray(qa.answer) || q.sub && q.toNextMustBeCorrect && qa.answer == qa.correct && !qa.inSub || qa.inSub && qa.position < q.subQuestion.length) {
+          var _loop = function _loop(index) {
+            var element = q.subQuestion[index];
+
             if (!_this2.allMadeQuestions.some(function (el) {
               return el.question == element.text;
             })) {
               _this2.currentQuestion = {
+                position: element.position,
                 gender: element.gender,
                 inSub: true,
+                sub: element.sub,
                 text: element.text,
                 type: element.type,
                 strinOptions: element.strinOptions,
                 correct: element.correct
               };
               controller = false;
+              return "break";
             }
-          });
-        }
+          };
 
-        if (controller) {
+          for (var index = 0; index < q.subQuestion.length; index++) {
+            var _ret = _loop(index);
+
+            if (_ret === "break") break;
+          }
+        } else if (controller) {
           _this2.currentCount++;
           _this2.currentQuestion = _this2.questions[_this2.currentCount];
         }
@@ -2483,7 +2500,12 @@ __webpack_require__.r(__webpack_exports__);
         container: this.$refs.formContainer,
         canCancel: false
       });
-      axios.get("/api/categories/?lang=" + document.documentElement.lang.substr(0, 2)).then(function (response) {
+      axios.get("/api/categories", {
+        params: {
+          lang: document.documentElement.lang.substr(0, 2),
+          page: this.page
+        }
+      }).then(function (response) {
         if (response.data.success) {
           _this.main = response.data.main;
           _this.others = response.data.others;

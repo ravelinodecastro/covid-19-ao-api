@@ -64,7 +64,7 @@ export default {
   },
   props: ["category_id"],
   methods: {
-    getServices($state={loaded(){}, complete(){}}) {
+    getServices($state = { loaded() {}, complete() {} }) {
       /* let loader = this.$loading.show({
         color: "#880e4f",
         loader: "dots",
@@ -73,12 +73,11 @@ export default {
       });*/
       axios
         .get(
-          "/api/services/" +
-            (this.category_id ? this.category_id : "") +
-            "?lang=" +
-            document.documentElement.lang.substr(0, 2),
+          "/api/services" + (this.category_id ? "/" + this.category_id : ""),
+
           {
             params: {
+              lang: document.documentElement.lang.substr(0, 2),
               page: this.page
             }
           }

@@ -108,6 +108,7 @@ export default {
           toNextMustBeCorrect: true,
           subQuestion: [
             {
+              position: 1,
               text: this.$t("covid19.q_time_fever"),
               type: "tf",
               strinOptions: [
@@ -117,6 +118,7 @@ export default {
               correct: "f"
             },
             {
+              position: 2,
               text: this.$t("covid19.q_temperature"),
               type: "tf",
               strinOptions: [
@@ -186,13 +188,18 @@ export default {
             this.$t("covid19.s_loss_of_smell"),
             this.$t("covid19.s_loss_of_taste")
           ],
-          type: "mcmr"
-        },
-        {
-          text: this.$t("covid19.q_took_medicines"),
-          type: "tf",
-          strinOptions: [this.$t("covid19.yes"), this.$t("covid19.no")],
-          correct: "t"
+          type: "mcmr",
+          sub: true,
+          toNextMustBeCorrect: true,
+          subQuestion: [
+            {
+              position: 1,
+              text: this.$t("covid19.q_took_medicines"),
+              type: "tf",
+              strinOptions: [this.$t("covid19.yes"), this.$t("covid19.no")],
+              correct: "t"
+            }
+          ]
         }
       ],
       currentQuestion: null,
@@ -243,7 +250,9 @@ export default {
       setTimeout(() => {
         let q = this.questions[this.currentCount];
         let qa = {
+          position: this.currentQuestion.position,
           gender: this.currentQuestion.gender,
+          sub: this.currentQuestion.sub,
           inSub: this.currentQuestion.inSub,
           question: this.currentQuestion.text,
           correct: this.currentQuestion.correct,
@@ -258,13 +267,6 @@ export default {
           type: qa.type
         };
 
-        let controller = true;
-        if (this.currentCount + 1 === this.questions.length) {
-          this.handleResults();
-
-          controller = false;
-        }
-
         if (this.currentQuestion.gender) {
           this.gender = this.answer;
           this.questions[2].text =
@@ -272,29 +274,46 @@ export default {
               ? this.$t("covid19.q_old_preg")
               : this.$t("covid19.q_old");
         }
+        let controller = true;
+        //(q.subQuestion ? q.subQuestion.slice(-1)[0].text : "not_sub") just to save the code
         if (
-          (q.sub && q.toNextMustBeCorrect && qa.answer == qa.correct) ||
-          (qa.inSub &&
-            qa.question ==
-              (q.subQuestion ? q.subQuestion.slice(-1)[0].text : "not_sub"))
+          (this.currentCount + 1 === this.questions.length && !q.sub) ||
+          (this.currentCount + 1 === this.questions.length &&
+            q.sub &&
+            (!Array.isArray(qa.answer) || qa.position == q.subQuestion.length))
         ) {
-          q.subQuestion.forEach(element => {
+          this.handleResults();
+
+          controller = false;
+        } else if (
+          (q.sub && q.toNextMustBeCorrect && Array.isArray(qa.answer)) ||
+          (q.sub &&
+            q.toNextMustBeCorrect &&
+            qa.answer == qa.correct &&
+            !qa.inSub) ||
+          (qa.inSub && qa.position < q.subQuestion.length)
+        ) {
+          for (let index = 0; index < q.subQuestion.length; index++) {
+            const element = q.subQuestion[index];
+
             if (
               !this.allMadeQuestions.some(el => el.question == element.text)
             ) {
               this.currentQuestion = {
+                position: element.position,
                 gender: element.gender,
                 inSub: true,
+                sub: element.sub,
                 text: element.text,
                 type: element.type,
                 strinOptions: element.strinOptions,
                 correct: element.correct
               };
               controller = false;
+              break;
             }
-          });
-        }
-        if (controller) {
+          }
+        } else if (controller) {
           this.currentCount++;
           this.currentQuestion = this.questions[this.currentCount];
         }

@@ -104,9 +104,12 @@ export default {
         canCancel: false
       });
       axios
-        .get(
-          "/api/categories/?lang=" + document.documentElement.lang.substr(0, 2)
-        )
+        .get("/api/categories", {
+          params: {
+            lang: document.documentElement.lang.substr(0, 2),
+            page: this.page
+          }
+        })
         .then(response => {
           if (response.data.success) {
             this.main = response.data.main;
