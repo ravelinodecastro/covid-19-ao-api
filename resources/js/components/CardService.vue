@@ -44,7 +44,7 @@
         >{{ $t('covid19.tryagain')}}.</a>
       </div>
     </infinite-loading>
-    <go-top bg-color="#fff" fg-color="#a12e35" :size="50" :right="50"></go-top>
+    <go-top bg-color="#a12e35" fg-color="#fff" :size="50" :right="50"></go-top>
   </div>
 </template>
 

@@ -14,12 +14,12 @@ use App\Http\Controllers\Controller;
   
         public function get(Request $request){
             $request->lang? app()->setLocale($request->lang) :app()->setLocale('pt');
-            $categories = Category::get();
-            $count = Category::count();
+            $categories = Category::whereStatus('1')->get();
+            $count = Category::whereStatus('1')->count();
             $skip = 5;
             $limit = $count - $skip;
             $main =    $categories->take(5);
-            $others = $count>5?Category::skip($skip)->take($limit)->get():[];
+            $others = $count>5?Category::whereStatus('1')->skip($skip)->take($limit)->get():[];
 
     
             return response()->json(['message' => "Operação realizada com sucesso.",

@@ -14,10 +14,22 @@ class CategoriesTableSeeder extends Seeder
     {
        $categories = ([
             [
+                'status'=>'1',
                 'created_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
                 'updated_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
             ],
             [
+                'status'=>'1',
+                'created_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
+                'updated_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
+            ],
+            [
+                'status'=>'1',
+                'created_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
+                'updated_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
+            ],
+            [
+                'status'=>'1',
                 'created_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
                 'updated_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
             ],

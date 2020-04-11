@@ -9,7 +9,7 @@ class Category extends Model
 {
     use \Astrotomic\Translatable\Translatable;
     public $translatedAttributes = ['name'];
-    protected $fillable = ['id'];
+    protected $fillable = ['id','status'];
    
 
 }

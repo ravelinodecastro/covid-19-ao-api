@@ -59,6 +59,52 @@ class CategoryTranslationsTableSeeder extends Seeder
                 'locale'=> 'fr',
             ],
             //End E-commerce
+
+             //Start Fintech
+             [
+                'name' => 'Fintech',
+                'category_id'=> '3',
+                'locale'=> 'pt',
+            ],
+            [
+                'name' => 'Fintech',
+                'category_id' => '3',
+                'locale' => 'en',
+            ],
+            [
+                'name' => 'Fintech',
+                'category_id'=> '3',
+                'locale'=> 'es',
+            ],
+            [
+                'name' => 'Fintech',
+                'category_id'=>'3',
+                'locale'=> 'fr',
+            ],
+            //End Fintech
+
+             //Start Delivery
+             [
+                'name' => 'Entregas',
+                'category_id'=> '4',
+                'locale'=> 'pt',
+            ],
+            [
+                'name' => 'Delivery',
+                'category_id' => '4',
+                'locale' => 'en',
+            ],
+            [
+                'name' => 'La entrega',
+                'category_id'=> '4',
+                'locale'=> 'es',
+            ],
+            [
+                'name' => 'La livraison',
+                'category_id'=>'4',
+                'locale'=> 'fr',
+            ],
+            //End Delivery
            
         ]);
 

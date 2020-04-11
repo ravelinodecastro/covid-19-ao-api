@@ -2260,7 +2260,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.clear();
       var loader = this.$loading.show({
-        color: "#880e4f",
+        color: "#a12e35",
         loader: "dots",
         container: this.$refs.formContainer,
         canCancel: false
@@ -2276,7 +2276,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       var loader = this.$loading.show({
-        color: "#880e4f",
+        color: "#a12e35",
         loader: "dots",
         container: this.$refs.formContainer,
         canCancel: false
@@ -2352,7 +2352,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       var loader = this.$loading.show({
-        color: "#880e4f",
+        color: "#a12e35",
         loader: "dots",
         container: this.$refs.formContainer,
         canCancel: false
@@ -2495,7 +2495,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var loader = this.$loading.show({
-        color: "#880e4f",
+        color: "#a12e35",
         loader: "dots",
         container: this.$refs.formContainer,
         canCancel: false
@@ -20882,8 +20882,8 @@ var render = function() {
       _vm._v(" "),
       _c("go-top", {
         attrs: {
-          "bg-color": "#fff",
-          "fg-color": "#a12e35",
+          "bg-color": "#a12e35",
+          "fg-color": "#fff",
           size: 50,
           right: 50
         }

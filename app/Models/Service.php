@@ -9,7 +9,7 @@ class Service extends Model
 {
     use \Astrotomic\Translatable\Translatable;
     public $translatedAttributes = ['description'];
-    protected $fillable = ['id', 'name','category_id', 'image', 'android', 'ios', 'web'];
+    protected $fillable = ['id', 'name','status','category_id', 'image', 'android', 'ios', 'web'];
    
     public function toArray(){
         return [

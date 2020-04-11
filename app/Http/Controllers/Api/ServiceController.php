@@ -14,7 +14,7 @@ use App\Http\Controllers\Controller;
   
         public function get(Request $request){
             $request->lang? app()->setLocale($request->lang) :app()->setLocale('pt');
-            $services = Service::orderBy('name')->paginate(15);
+            $services = Service::whereStatus('1')->orderBy('name')->paginate(15);
        
             return response()->json([
                 'success' => true,
@@ -27,7 +27,7 @@ use App\Http\Controllers\Controller;
         }
         public function getByCat($id, Request $request){
             $request->lang? app()->setLocale($request->lang) :app()->setLocale('pt');
-            $services = Service::where('category_id', $id)->orderBy('name')->paginate(15);
+            $services = Service::whereStatus('1')->where('category_id', $id)->orderBy('name')->paginate(15);
        
             return response()->json([
                 'success' => true,
@@ -42,6 +42,7 @@ use App\Http\Controllers\Controller;
        
                 $service = new Service();
                 $service->name = $request->name;
+                $service->status = '1';
                 $service->image = $request->image;
                 $service->android = $request->android;
                 $service->ios = $request->ios;

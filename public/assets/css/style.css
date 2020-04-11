@@ -264,6 +264,7 @@ footer.unique-footer .footer-info-single p {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     max-height: 5em;
+    min-height: 5em;
     font-size: 14px;
     -webkit-box-orient: vertical;   
 }

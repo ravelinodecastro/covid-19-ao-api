@@ -98,7 +98,7 @@ export default {
   methods: {
     getCategories() {
       let loader = this.$loading.show({
-        color: "#880e4f",
+        color: "#a12e35",
         loader: "dots",
         container: this.$refs.formContainer,
         canCancel: false
