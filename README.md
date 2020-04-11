@@ -7,14 +7,16 @@ Covid-19 Ao Api is an Angolan API created to show in real time the information a
 [Click here to see results in your browser](https://covid19ao.com/api/general)
 
 ## Covid-19 Ao (Plataform)
-[In the home directory](https://covid19ao.com/), you can find the platform, which can provide the same results as the API, accompanied also with "prevention tips" and one online for covid-19 dysguinostico based on the answers.
+[In the home directory](https://covid19ao.com/), you can find the platform, which can provide the same results as the API, also accompanied by "prevention tips", an online test for self-diagnosis of covid-19 disease and a list of services in which they can be ordered from home (only in Angola).
 
 ## Endpoitns
 | Endpoint       | Description   | Type     |
 | ---            | ---           | ---      | 
 | https://covid19ao.com/api/general | It returns the lastest update from governmant reports. | Object |
 | https://covid19ao.com/api/report | It returns the updates from each day, since the API was created. | Array of objects |
-| https://covid19ao.com/api/tips?lang=pt | It returns prevention tips in portuguese. You can change the language (available: en, pt, es, fr) | Array of objects |
+| https://covid19ao.com/api/tips?lang=pt | It returns prevention tips in portuguese. You can change the language (available in: en, pt, es, fr) | Array of objects |
+| https://covid19ao.com/api/services?lang=pt | It returns a list of services in portuguese. You can change the language (available in: en, pt, es, fr) | Array of objects |
+| https://covid19ao.com/api/services/1?lang=pt | Returns a list of all services that belong to the category with ID 1 in Portuguese. You can change the language (available in: en, pt, es, fr) | Array of objects |
 
 ## Usage (Javascript)
 
