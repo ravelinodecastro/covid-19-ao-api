@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class General extends Model
 {
-    protected $fillable = ['id', 'confirmed', 'suspects', 'recovered', 'deaths'];
+    protected $fillable = ['id', 'active','confirmed', 'suspects', 'recovered', 'deaths'];
    
 
 }

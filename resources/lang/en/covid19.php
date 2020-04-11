@@ -12,6 +12,8 @@ return [
     'login' => 'Login',
     'register' => 'Register',
     'total' => 'Total cases',
+    'total_active' => 'Total active cases',
+    'active' => 'Active cases',
     'confirmed' => 'Confirmed cases',
     'suspects' => 'Suspicious cases',
     'recovered' => 'Recovered',

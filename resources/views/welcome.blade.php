@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div>
-                <div class="px-4 py-1"><b class="font-weight-bold">{{__('covid19.total')}}</b>: {{$data->confirmed + $data->suspects +$data->recovered +$data->deaths}}</div>
+                <div class="px-4 py-1"><b class="font-weight-bold">{{__('covid19.total_active')}}</b>: {{$data->confirmed + $data->suspects +$data->recovered +$data->deaths}}</div>
                 <div class="px-4 py-1">{{__('covid19.lastupdate')}}: {{$date}}</div>
             </div>
            

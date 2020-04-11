@@ -12,6 +12,8 @@ return [
     "login" => "Login",
     "register" => "Register",
     'total' => 'Nombre total de cas',
+    'total_active' => 'Nombre total de cas actifs',
+    'active' => 'Cas actifs',
     "confirmed" => "Cas confirmés",
     "suspects" => "Cas suspects",
     "recovered" => "récupéré",

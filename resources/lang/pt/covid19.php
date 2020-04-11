@@ -13,6 +13,8 @@ return [
     'login'=>'Login',
     'register'=>'Cadastrar-se',
     'total' => 'Total de casos',
+    'total_active' => 'Total de casos activos',
+    'active' => 'Casos activos',
     'confirmed'=>'Casos confirmados',
     'suspects'=>'Casos suspeitos',
     'recovered'=>'Recuperados',

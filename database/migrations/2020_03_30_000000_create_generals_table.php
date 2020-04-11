@@ -15,10 +15,11 @@ class CreateGeneralsTable extends Migration
     {
         Schema::create('generals', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('confirmed')->default(0);
+            $table->integer('active')->default(0);
             $table->integer('suspects')->default(0);
             $table->integer('recovered')->default(0);
             $table->integer('deaths')->default(0);
+            $table->integer('confirmed')->default(0);
             $table->timestamps();
         });
     }
