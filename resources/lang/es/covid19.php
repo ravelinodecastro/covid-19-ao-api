@@ -56,7 +56,9 @@ return [
     
     'yes' => "Sí",
     'no' => "No",
-    
+   
+    'q_physical_contact' => "¿Ha tenido contacto físico recientemente con alguien de un país con casos confirmados de Covid-19?",
+
     'q_time_fever' => "¿Has tenido fiebre por mucho tiempo?",
     
     'two_less' => "Dos días o menos", 

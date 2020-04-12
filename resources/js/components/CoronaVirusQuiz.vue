@@ -155,6 +155,13 @@ export default {
           correct: "t"
         },
         {
+          text: this.$t("covid19.q_physical_contact"),
+          type: "tf",
+          strinOptions: [this.$t("covid19.yes"), this.$t("covid19.no")],
+          correct: "t"
+        },
+        
+        {
           text: this.$t("covid19.q_approch"),
           type: "tf",
           strinOptions: [this.$t("covid19.yes"), this.$t("covid19.no")],

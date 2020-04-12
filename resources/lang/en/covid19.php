@@ -36,7 +36,7 @@ return [
     'test' => 'Test',
     'about' => 'About',
     'about_description' => 'This project was developed by <a href="https://github.com/ravelinodecastro/"> Ravelino de Castro </a>, a fullstack programmer, student of computer science',
-    'contribution' => 'contribution',
+    'contribution' => 'Contribution',
     'contribution_description' => 'If you are a developer, you can contribute to the project, as it is open source. If you are not and still want to contribute to the project, stay at home and comply with the quarantine.',
     
     'test_header' => 'Covid-19 online test',
@@ -52,10 +52,12 @@ return [
     'call111' => 'Call 111',
     'tips' => 'Prevention tips',
     'new_test' => 'New test',
-    'q_fever' => 'did you have a fever?',
+    'q_fever' => 'Did you have a fever?',
     
     'yes' => "Yes",
     'no' => "No",
+    
+    'q_physical_contact' => "Have you recently had physical contact with someone from a country with confirmed cases of Covid-19?",
     
     'q_time_fever' => "Have you had a fever for a long time?",
     'two_less' => "Two days or less", 

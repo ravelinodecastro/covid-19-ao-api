@@ -57,6 +57,8 @@ return [
         
     'yes'=>"Sim",  
     'no'=> "Não",
+
+    'q_physical_contact'=> "Recentemente teve contacto físco com alguém proveniente de um país com casos confirmados de Covid-19?",
        
     'q_time_fever'=> "Faz tempo que você está com febre?",
             
