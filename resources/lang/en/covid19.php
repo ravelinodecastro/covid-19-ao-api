@@ -87,8 +87,8 @@ return [
     's_body_aches' => "Body pain or malaise",
     's_sore_throat' => "Sore throat",
     's_diarrhea' => "Diarrhea or abdominal pain",
-    's_loss_of_smell' => "Loss of smell (no smell)",
-    's_loss_of_taste' => "Loss of taste (no taste)",
+    's_loss_of_smell' => "Loss of smell",
+    's_loss_of_taste' => "Loss of taste",
 
     'q_took_medicines' => "Did you take any medication for your symptoms?",
 

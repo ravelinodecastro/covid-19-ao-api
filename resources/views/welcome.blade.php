@@ -16,8 +16,8 @@
             <div class="col-md-3">
                 <div class="card border-warning m-3 m-md-1 p-3">
                     <div class="card border-warning shadow text-warning p-3 my-card"><span class="fa fa-exclamation-triangle" aria-hidden="true"></span></div>
-                    <div class="text-warning text-center mt-3"><h4>{{__('covid19.suspects')}}</h4></div>
-                    <div class="text-warning text-center mt-2"><h1>{{$data->suspects}}</h1></div>
+                    <div class="text-warning text-center mt-3"><h4>{{__('covid19.active')}}</h4></div>
+                    <div class="text-warning text-center mt-2"><h1>{{$data->active}}</h1></div>
                 </div>
             </div>
             <div class="col-md-3">
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div>
-                <div class="px-4 py-1"><b class="font-weight-bold">{{__('covid19.total_active')}}</b>: {{$data->active}}</div>
+                <div class="px-4 py-1"><b class="font-weight-bold">{{__('covid19.suspects')}}</b>: {{$data->suspects}}</div>
                 <div class="px-4 py-1">{{__('covid19.lastupdate')}}: {{$date}}</div>
             </div>
            

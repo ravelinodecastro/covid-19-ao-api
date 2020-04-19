@@ -73,7 +73,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="https://github.com/ravelinodecastro/covid-19-ao-api" target="_blank">{{__('covid19.api')}}</a>
                         </li>
-                        @if (Route::has('login'))
+                        @if (Route::has('login.user'))
                             @auth
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/home') }}">{{__('covid19.homepgae')}}</a>

@@ -89,8 +89,8 @@ return [
     "s_body_aches" => "Douleur corporelle ou malaise",
     "s_sore_throat" => "Maux de gorge",
     "s_diarrhea" => "Diarrhée ou douleur abdominale",
-    "s_loss_of_smell" => "Perte d'odeur (pas d'odeur)",
-    "s_loss_of_taste" => "Perte de goût (pas de goût)",
+    "s_loss_of_smell" => "Perte de l'odorat",
+    "s_loss_of_taste" => "Perte de goût",
     
     "q_took_medicines" => "Avez-vous pris des médicaments pour vos symptômes?",
 

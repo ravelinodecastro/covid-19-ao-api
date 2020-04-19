@@ -27,4 +27,10 @@ class Service extends Model
             'updated_at' => $this->updated_at,
         ];
     }
+    public function image(array $attributes)
+    {
+        if ($this->photo_path) {
+            return URL::to(App::make(Server::class)->fromPath($this->photo_path, $attributes));
+        }
+    }
 }

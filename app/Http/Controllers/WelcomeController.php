@@ -9,14 +9,17 @@
     use App\Lib\Scraper;
 
     use App\Models\General;
+    use App\Models\Config;
 
     class WelcomeController extends Controller
     {
   
         public function index(){
-            $scraper = new Scraper(new Client());
- 
-            $scraper->handle('https://www.covid19.gov.ao/');
+            $configs = Config::first();
+            if ($configs->auto_update ==1){
+                $scraper = new Scraper(new Client());
+                $scraper->handle($configs->source);
+            }
             $data = General::orderBy('created_at', 'desc')->orderBy('updated_at', 'desc')->first()->setHidden(['id']);
             // $date =  Carbon::today()->format('d-m-Y');
             $date =  $data->created_at->format('d-m-Y');

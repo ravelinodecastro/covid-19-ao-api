@@ -88,8 +88,8 @@ return [
     's_body_aches' => "Dolor o malestar corporal",
     's_sore_throat' => "Dolor de garganta",
     's_diarrhea' => "Diarrea o dolor abdominal",
-    's_loss_of_smell' => "Pérdida del olfato (sin olor)",
-    's_loss_of_taste' => "Pérdida de sabor (sin sabor)",
+    's_loss_of_smell' => "Pérdida del olfato",
+    's_loss_of_taste' => "Pérdida de sabor",
     'q_took_medicines' => "¿Tomó algún medicamento para sus síntomas?",
 
     'tips_header' => "Siga estos consejos, comparta con sus amigos y familiares, salve su vida y a sus seres queridos."

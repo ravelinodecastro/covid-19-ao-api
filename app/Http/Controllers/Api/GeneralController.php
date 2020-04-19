@@ -10,14 +10,17 @@
     use App\Lib\Scraper;
 
     use App\Models\General;
+    use App\Models\Config;
 
     class GeneralController extends Controller
     {
   
         public function general(){
-            $scraper = new Scraper(new Client());
- 
-            $scraper->handle('https://www.covid19.gov.ao/');
+            $configs = Config::first();
+            if ($configs->auto_update ==1){
+                $scraper = new Scraper(new Client());
+                $scraper->handle($configs->source);
+            }
             $data = General::orderBy('created_at', 'desc')->orderBy('updated_at', 'desc')->first()->setHidden(['id']);
          
             return response()->json([
@@ -32,7 +35,7 @@
         public function report(){
             $scraper = new Scraper(new Client());
  
-            $scraper->handle('https://www.covid19.gov.ao/');
+            $scraper->handle(Config::first()->source);
             $data = General::orderBy('created_at', 'desc')->orderBy('updated_at', 'desc')->get();
          
             return response()->json([
