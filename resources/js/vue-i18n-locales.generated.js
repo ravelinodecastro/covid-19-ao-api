@@ -1,8 +1,19 @@
 export default {
     "en": {
+        "passwords": {
+            "reset": "Your password has been reset!",
+            "sent": "We have emailed your password reset link!",
+            "throttled": "Please wait before retrying.",
+            "token": "This password reset token is invalid.",
+            "user": "We can't find a user with that email address."
+        },
         "auth": {
             "failed": "These credentials do not match our records.",
             "throttle": "Too many login attempts. Please try again in {seconds} seconds."
+        },
+        "pagination": {
+            "previous": "&laquo; Previous",
+            "next": "Next &raquo;"
         },
         "covid19": {
             "seo_description": "Covid-19 Ao is an Angolan Platform and API created to show in real time information on cases of the corona virus detected in the Angolan territory, as well as allowing users to self-diagnose (online test) through questions and answers",
@@ -80,21 +91,10 @@ export default {
             "s_body_aches": "Body pain or malaise",
             "s_sore_throat": "Sore throat",
             "s_diarrhea": "Diarrhea or abdominal pain",
-            "s_loss_of_smell": "Loss of smell (no smell)",
-            "s_loss_of_taste": "Loss of taste (no taste)",
+            "s_loss_of_smell": "Loss of smell",
+            "s_loss_of_taste": "Loss of taste",
             "q_took_medicines": "Did you take any medication for your symptoms?",
             "tips_header": "Follow these tips, share with your friends and family, save your life and those you love."
-        },
-        "pagination": {
-            "previous": "&laquo; Previous",
-            "next": "Next &raquo;"
-        },
-        "passwords": {
-            "reset": "Your password has been reset!",
-            "sent": "We have emailed your password reset link!",
-            "throttled": "Please wait before retrying.",
-            "token": "This password reset token is invalid.",
-            "user": "We can't find a user with that email address."
         },
         "validation": {
             "accepted": "The {attribute} must be accepted.",
@@ -210,9 +210,20 @@ export default {
         }
     },
     "es": {
+        "passwords": {
+            "reset": "¡Tu contraseña ha sido restablecida!",
+            "sent": "¡Te hemos enviado por correo el enlace para restablecer tu contraseña!",
+            "throttled": "Por favor espera antes de intentar de nuevo.",
+            "token": "El token de recuperación de contraseña es inválido.",
+            "user": "No podemos encontrar ningún usuario con ese correo electrónico."
+        },
         "auth": {
             "failed": "Estas credenciales no coinciden con nuestros registros.",
             "throttle": "Demasiados intentos de acceso. Por favor intente nuevamente en {seconds} segundos."
+        },
+        "pagination": {
+            "previous": "&laquo; Anterior",
+            "next": "Siguiente &raquo;"
         },
         "covid19": {
             "seo_description": "Covid-19 Ao es una plataforma y API angoleñas creadas para mostrar en tiempo real información sobre casos del virus corona detectados en el territorio angoleño, así como para permitir a los usuarios autodiagnosticarse (prueba en línea) a través de preguntas y respuestas",
@@ -290,21 +301,10 @@ export default {
             "s_body_aches": "Dolor o malestar corporal",
             "s_sore_throat": "Dolor de garganta",
             "s_diarrhea": "Diarrea o dolor abdominal",
-            "s_loss_of_smell": "Pérdida del olfato (sin olor)",
-            "s_loss_of_taste": "Pérdida de sabor (sin sabor)",
+            "s_loss_of_smell": "Pérdida del olfato",
+            "s_loss_of_taste": "Pérdida de sabor",
             "q_took_medicines": "¿Tomó algún medicamento para sus síntomas?",
             "tips_header": "Siga estos consejos, comparta con sus amigos y familiares, salve su vida y a sus seres queridos."
-        },
-        "pagination": {
-            "previous": "&laquo; Anterior",
-            "next": "Siguiente &raquo;"
-        },
-        "passwords": {
-            "reset": "¡Tu contraseña ha sido restablecida!",
-            "sent": "¡Te hemos enviado por correo el enlace para restablecer tu contraseña!",
-            "throttled": "Por favor espera antes de intentar de nuevo.",
-            "token": "El token de recuperación de contraseña es inválido.",
-            "user": "No podemos encontrar ningún usuario con ese correo electrónico."
         },
         "validation": {
             "accepted": "{attribute} debe ser aceptado.",
@@ -456,9 +456,20 @@ export default {
         }
     },
     "fr": {
+        "passwords": {
+            "reset": "Votre mot de passe a été réinitialisé !",
+            "sent": "Nous vous avons envoyé par email le lien de réinitialisation du mot de passe !",
+            "throttled": "Veuillez attendre afin de ré-essayer.",
+            "token": "Ce jeton de réinitialisation du mot de passe n'est pas valide.",
+            "user": "Aucun utilisateur n'a été trouvé avec cette adresse email."
+        },
         "auth": {
             "failed": "Ces identifiants ne correspondent pas à nos enregistrements",
             "throttle": "Tentatives de connexion trop nombreuses. Veuillez essayer de nouveau dans {seconds} secondes."
+        },
+        "pagination": {
+            "previous": "&laquo; Précédent",
+            "next": "Suivant &raquo;"
         },
         "covid19": {
             "seo_description": "Covid-19 Ao est une plate-forme et une API angolaises créées pour afficher en temps réel des informations sur les cas de virus corona détectés sur le territoire angolais, ainsi que pour permettre aux utilisateurs de faire un auto-diagnostic (test en ligne) à travers des questions et réponses",
@@ -536,21 +547,10 @@ export default {
             "s_body_aches": "Douleur corporelle ou malaise",
             "s_sore_throat": "Maux de gorge",
             "s_diarrhea": "Diarrhée ou douleur abdominale",
-            "s_loss_of_smell": "Perte d'odeur (pas d'odeur)",
-            "s_loss_of_taste": "Perte de goût (pas de goût)",
+            "s_loss_of_smell": "Perte de l'odorat",
+            "s_loss_of_taste": "Perte de goût",
             "q_took_medicines": "Avez-vous pris des médicaments pour vos symptômes?",
             "tips_header": "Suivez ces conseils, partagez avec vos amis et votre famille, sauvez votre vie et ceux que vous aimez."
-        },
-        "pagination": {
-            "previous": "&laquo; Précédent",
-            "next": "Suivant &raquo;"
-        },
-        "passwords": {
-            "reset": "Votre mot de passe a été réinitialisé !",
-            "sent": "Nous vous avons envoyé par email le lien de réinitialisation du mot de passe !",
-            "throttled": "Veuillez attendre afin de ré-essayer.",
-            "token": "Ce jeton de réinitialisation du mot de passe n'est pas valide.",
-            "user": "Aucun utilisateur n'a été trouvé avec cette adresse email."
         },
         "validation": {
             "accepted": "Le champ {attribute} doit être accepté.",
@@ -696,9 +696,20 @@ export default {
         }
     },
     "pt": {
+        "passwords": {
+            "reset": "A palavra-passe foi redefinida!",
+            "sent": "O lembrete para a palavra-passe foi enviado!",
+            "throttled": "Por favor aguarde, antes de tentar novamente.",
+            "token": "Este código de recuperação da palavra-passe é inválido.",
+            "user": "Não existe nenhum utilizador com o endereço de correio eletrónico indicado."
+        },
         "auth": {
             "failed": "As credenciais indicadas não coincidem com as registadas no sistema.",
             "throttle": "O número limite de tentativas de login foi atingido. Por favor tente novamente dentro de {seconds} segundos."
+        },
+        "pagination": {
+            "previous": "&laquo; Anterior",
+            "next": "Próxima &raquo;"
         },
         "covid19": {
             "seo_description": "Covid-19 Ao é uma Plataforma e API angolana criada para mostrar em tempo real as informações sobre os casos do corona vírus detetados no território angolano, bem como permitir os utilizadores fazerem um autodiagnóstico (teste online) por meio de perguntas e respostas",
@@ -751,7 +762,7 @@ export default {
             "q_fever": "você teve febre?",
             "yes": "Sim",
             "no": "Não",
-            "q_physical_contact": "Recentemente teve contacto físco com alguém proveniente de um país com casos confirmados de Covid-19?",
+            "q_physical_contact": "Recentemente teve contacto físico com alguém proveniente de um país com casos confirmados de Covid-19?",
             "q_time_fever": "Faz tempo que você está com febre?",
             "two_less": "Dois dias ou menos",
             "two_more": "Mais de dois dias",
@@ -780,17 +791,6 @@ export default {
             "s_loss_of_taste": "Perda do paladar",
             "q_took_medicines": "Você fez alguma medicação para os seus sintomas?",
             "tips_header": "Siga as dicas, partilhe com seus amigos e familiares, salve a sua vida e daqueles que você ama."
-        },
-        "pagination": {
-            "previous": "&laquo; Anterior",
-            "next": "Próxima &raquo;"
-        },
-        "passwords": {
-            "reset": "A palavra-passe foi redefinida!",
-            "sent": "O lembrete para a palavra-passe foi enviado!",
-            "throttled": "Por favor aguarde, antes de tentar novamente.",
-            "token": "Este código de recuperação da palavra-passe é inválido.",
-            "user": "Não existe nenhum utilizador com o endereço de correio eletrónico indicado."
         },
         "validation": {
             "accepted": "O campo {attribute} deverá ser aceite.",
@@ -906,9 +906,20 @@ export default {
         }
     },
     "pt-BR": {
+        "passwords": {
+            "reset": "Sua senha foi redefinida!",
+            "sent": "Enviamos um link para redefinir a sua senha por e-mail.",
+            "throttled": "Por favor espere antes de tentar novamente.",
+            "token": "Esse código de redefinição de senha é inválido.",
+            "user": "Não conseguimos encontrar nenhum usuário com o endereço de e-mail informado."
+        },
         "auth": {
             "failed": "Credenciais informadas não correspondem com nossos registros.",
             "throttle": "Você realizou muitas tentativas de login. Por favor, tente novamente em {seconds} segundos."
+        },
+        "pagination": {
+            "previous": "&laquo; Anterior",
+            "next": "Próxima &raquo;"
         },
         "covid19": {
             "seo_description": "Covid-19 Ao é uma Plataforma e API angolana criada para mostrar em tempo real as informações sobre os casos do corona vírus detetados no território angolano, bem como permitir os utilizadores fazerem um autodiagnóstico (teste online) por meio de perguntas e respostas",
@@ -961,7 +972,7 @@ export default {
             "q_fever": "você teve febre?",
             "yes": "Sim",
             "no": "Não",
-            "q_physical_contact": "Recentemente teve contacto físco com alguém proveniente de um país com casos confirmados de Covid-19?",
+            "q_physical_contact": "Recentemente teve contacto físico com alguém proveniente de um país com casos confirmados de Covid-19?",
             "q_time_fever": "Faz tempo que você está com febre?",
             "two_less": "Dois dias ou menos",
             "two_more": "Mais de dois dias",
@@ -990,17 +1001,6 @@ export default {
             "s_loss_of_taste": "Perda do paladar",
             "q_took_medicines": "Você fez alguma medicação para os seus sintomas?",
             "tips_header": "Siga as dicas, partilhe com seus amigos e familiares, salve a sua vida e daqueles que você ama."
-        },
-        "pagination": {
-            "previous": "&laquo; Anterior",
-            "next": "Próxima &raquo;"
-        },
-        "passwords": {
-            "reset": "Sua senha foi redefinida!",
-            "sent": "Enviamos um link para redefinir a sua senha por e-mail.",
-            "throttled": "Por favor espere antes de tentar novamente.",
-            "token": "Esse código de redefinição de senha é inválido.",
-            "user": "Não conseguimos encontrar nenhum usuário com o endereço de e-mail informado."
         },
         "validation": {
             "accepted": "O campo {attribute} deve ser aceito.",
