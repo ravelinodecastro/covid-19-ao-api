@@ -17,9 +17,11 @@
   
         public function general(){
             $configs = Config::first();
+            $status = 2; 
             if ($configs->auto_update ==1){
                 $scraper = new Scraper(new Client());
                 $scraper->handle($configs->source);
+                $status = $scraper->status == 1? 1: 2;
             }
             $data = General::orderBy('created_at', 'desc')->orderBy('updated_at', 'desc')->first()->setHidden(['id']);
          
@@ -27,7 +29,7 @@
                 'success' => true,
                 'message' => "Operação realizada com sucesso.", 
                 'data' => $data,
-                'status' => $scraper->status == 1? 1: 2,
+                'status' => $status,
                 'license'   => 'This API was developed by Ravelino de Castro (https://github.com/ravelinodecastro) using official information from the government of angola (ministry of health) available at covid19.gov.ao'
             ]);
         }
