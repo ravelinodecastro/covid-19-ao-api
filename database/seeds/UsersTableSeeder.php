@@ -17,8 +17,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name'=>'Ravelino de Castro',
                 'email'=>'ravelinodecastro@gmail.com',
-                'password' => Hash::make('angolaoddd'),
-               // 'password' => Hash::make('stop_being_curious'),
+                'password' => Hash::make('stop_being_curious'),
                 'created_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
                 'updated_at' =>Carbon:: now()-> format('Y-m-d H:i:s'),
             ],
