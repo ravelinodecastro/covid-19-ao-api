@@ -1,6 +1,7 @@
 
 
 ## Covid-19 Ao Api
+![covid19ao](screenshot_covid19ao.png)
 
 Covid-19 Ao Api is an Angolan API created to show in real time the information about the cases of the corona virus detected in the Angolan territory.
 
