@@ -35,7 +35,7 @@
                         for ($i=0; $i < $node->filter('span.f-size2')->count(); $i++) { 
                             
                             if ($node->filter('span.f-size2')->eq($i)->text() =="Confirmados"){
-                                $data['active'][] = $node->filter('span.big-number')->eq($i)->text();
+                                $data['confirmed'][] = $node->filter('span.big-number')->eq($i)->text();
                                 
                             }
                             else if ($node->filter('span.f-size2')->eq($i)->text() =="Suspeitos"){
@@ -69,7 +69,7 @@
 
                 $general = new General();
 
-                $general->active = isset($data['active']) ? $data['active'][0] : "0";
+             
 
                 $general->suspects = isset($data['suspects']) ? $data['suspects'][0] : "0";
 
@@ -77,23 +77,23 @@
 
                 $general->deaths = isset($data['deaths']) ? $data['deaths'][0] : "0";
 
-                $general->confirmed =  $general->active +  $general->suspects +   $general->recovered +    $general->deaths;
-
+                $general->confirmed = isset($data['confirmed']) ? $data['confirmed'][0] : "0"; 
+                $general->active = $general->confirmed -   $general->recovered -    $general->deaths;
 
                 $general->save();
 
                 $this->savedItems++;
             }
             else {
-                $checkExist->active = isset($data['active']) ? $data['active'][0] : "0";
-
+               
                 $checkExist->suspects = isset($data['suspects']) ? $data['suspects'][0] : "0";
 
                 $checkExist->recovered = isset($data['recovered']) ? $data['recovered'][0] : "0";
 
                 $checkExist->deaths = isset($data['deaths']) ? $data['deaths'][0] : "0";
 
-                $general->confirmed =  $general->active +  $general->suspects +   $general->recovered +    $general->deaths;
+                $general->confirmed =  isset($data['confirmed']) ? $data['confirmed'][0] : "0"; 
+                $checkExist->active =  $general->confirmed -   $general->recovered -    $general->deaths;
 
                 $checkExist->save();
             }
