@@ -14,14 +14,22 @@
 
     class GeneralController extends Controller
     {
-  
+        private $scraper;
+        private $client;
+
+        public function __construct(Scraper $scraper, Client $client)
+        {
+            $this->client = $client;
+            $this->scraper = $scraper;
+        }
+
         public function general(){
             $configs = Config::first();
             $status = 2; 
             if ($configs->auto_update ==1){
-                $scraper = new Scraper(new Client());
-                $scraper->handle($configs->source);
-                $status = $scraper->status == 1? 1: 2;
+//                $this->scraper($this->client);
+                $this->scraper->handle($configs->source);
+                $status = $this->scraper->status == 1? 1: 2;
             }
             $data = General::orderBy('created_at', 'desc')->orderBy('updated_at', 'desc')->first()->setHidden(['id']);
          
@@ -35,16 +43,16 @@
         }
 
         public function report(){
-            $scraper = new Scraper(new Client());
+//            $scraper = new Scraper(new Client());
  
-            $scraper->handle(Config::first()->source);
+            $this->scraper->handle(Config::first()->source);
             $data = General::orderBy('created_at', 'desc')->orderBy('updated_at', 'desc')->get();
          
             return response()->json([
                 'success' => true,
                 'message' => "Operação realizada com sucesso.", 
                 'data' => $data,
-                'status' => $scraper->status == 1? 1: 2,
+                'status' => $this->scraper->status == 1? 1: 2,
                 'license'   => 'This API was developed by Ravelino de Castro (https://github.com/ravelinodecastro) using official information from the government of angola (ministry of health) available at covid19.gov.ao'
             ]);
         }
